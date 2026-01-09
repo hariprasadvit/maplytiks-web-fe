@@ -1,0 +1,51 @@
+//base
+@import 'base/reset';
+@import 'base/var';
+
+// Dark Theme Foundation
+@import 'base/darkTheme';
+@import 'base/patterns';
+@import 'base/glassmorphism';
+@import 'base/animations';
+
+@import 'base/common';
+@import 'base/banner';
+@import 'base/projects';
+@import 'base/accordion';
+@import 'base/col';
+@import 'base/text';
+@import 'base/datepicker';
+@import 'base/brief';
+@import 'base/button';
+@import 'base/_createProject';
+@import 'base/_analytics';
+@import 'base/_globalFilter';
+@import 'base/signinpage';
+@import 'base/input';
+@import 'base/toast';
+@import 'base/overview';
+@import 'base/chart';
+@import 'base/socialTimeline';
+@import 'base/heatmap';
+@import 'base/contactUs';
+@import 'base/about';
+@import 'base/profile';
+@import 'base/static';
+@import 'base/sentiment';
+@import 'base/usp';
+@import 'base/buldingblocks';
+@import 'base/brand';
+@import 'base/socialdonut';
+@import 'base/socialdetails';
+
+@import '../assets/scss/base/_typography';
+@import '../scss/base/analyticsNew';
+@import '../scss/base/_durationCard';
+@import '../scss/base/_highlightCard';
+@import '../scss/base/_rankingCard';
+@import '../scss/base/platform';
+
+//layout
+@import 'layout/footer';
+@import 'layout/header';
+

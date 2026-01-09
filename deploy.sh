@@ -1,0 +1,1 @@
+aws s3 rm s3://v2.maplytiks.com/ --recursive && npm run build && aws s3 sync build s3://v2.maplytiks.com/ --acl public-read

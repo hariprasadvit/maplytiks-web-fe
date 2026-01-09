@@ -1,0 +1,32 @@
+import { createSelector } from 'reselect';
+import { initialState } from './reducer';
+
+/**
+ * Direct selector to the authentication state domain
+ */
+
+const selectAuthenticationDomain = state =>
+  state.authentication || initialState;
+
+/**
+ * Other specific selectors
+ */
+
+/**
+ * Default selector used by Authentication
+ */
+
+const makeSelectAuthentication = () =>
+  createSelector(
+    selectAuthenticationDomain,
+    substate => substate,
+  );
+
+const makeSelectUser = () =>
+  createSelector(
+    selectAuthenticationDomain,
+    substate => substate.user,
+  );
+
+export default makeSelectAuthentication;
+export { selectAuthenticationDomain, makeSelectUser };

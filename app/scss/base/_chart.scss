@@ -1,0 +1,198 @@
+// <=============================BAR CHART==================================>
+// Dark Theme Chart Styles
+
+.y-axis > .tick > line {
+  stroke-dasharray: 4, 4;
+  stroke-opacity: 0.1;
+  stroke-linecap: 'round';
+  stroke: $border-muted;
+}
+
+.y-axis > g.tick:nth-child(odd) > text {
+  display: none;
+}
+
+.y2-axis > g.tick:nth-child(even) > text {
+  display: none;
+}
+
+.y3-axis > g.tick:nth-child(even) > text {
+  display: none;
+}
+
+.y4-axis > g.tick:nth-child(odd) > text {
+  display: none;
+}
+
+.x-axis-label > p {
+  color: $text-primary;
+  font-family: $font-primary;
+  font-size: 11px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 2.5;
+}
+
+.x-axis > path {
+  display: none;
+}
+
+.x-axis > .tick > line {
+  display: none;
+}
+
+.x-axis > .tick > text {
+  fill: $text-secondary;
+  font-weight: 600;
+  font-size: 11px;
+  font-family: $font-primary;
+}
+
+.y-axis > path {
+  display: none;
+}
+
+.y-axis > .tick > text {
+  fill: $accent-primary;
+  font-weight: 600;
+  font-size: 11px;
+  font-family: $font-primary;
+}
+
+.y2-axis > path {
+  display: none;
+}
+
+.y2-axis > .tick > line {
+  display: none;
+}
+
+.y2-axis > .tick > text {
+  fill: $accent-success;
+  font-weight: 600;
+  font-size: 11px;
+  font-family: $font-primary;
+}
+
+.y3-axis > path {
+  display: none;
+}
+
+.y3-axis > .tick > line {
+  display: none;
+}
+
+.y3-axis > .tick > text {
+  fill: $accent-secondary;
+  font-weight: 600;
+  font-size: 11px;
+  font-family: $font-primary;
+}
+
+.y4-axis > path {
+  display: none;
+}
+
+.y4-axis > .tick > line {
+  display: none;
+}
+
+.y4-axis > .tick > text {
+  fill: $accent-error;
+  font-weight: 600;
+  font-size: 11px;
+  font-family: $font-primary;
+}
+
+.y-axis > g:nth-child(2) > line {
+  display: none;
+}
+
+.y-axis > .tick > line:nth-child(2) {
+  display: none;
+}
+
+.y-axis > .tick > line {
+  transform: translate(15px, 0);
+}
+
+// <=============================DONUT CHART==================================>
+
+.donut-path {
+  shape-rendering: auto;
+}
+
+.shadow-circle-bottom {
+  filter: url(#glow) !important;
+}
+
+.shadow-circle-top {
+  filter: url(#glow) !important;
+}
+
+.donut-title-sm {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.84px;
+  fill: $text-primary;
+}
+
+.donut-title-lg {
+  font-size: 21px;
+  font-weight: 500;
+  letter-spacing: 0.84px;
+  fill: $text-primary;
+}
+
+.donut-sub-title-sm {
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.84px;
+  fill: $text-secondary;
+}
+
+.donut-sub-title-lg {
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.84px;
+  fill: $text-secondary;
+}
+
+// <=============================Timeline CHART==================================>
+
+.x-axis-head {
+  fill: $text-secondary;
+  font-weight: 500;
+  font-size: 12px;
+  font-family: $font-primary;
+}
+
+.timeline-y > g:nth-child(2) > line {
+  display: block;
+}
+
+// <=============================Race Bar CHART==================================>
+
+.raceChart-x-axis {
+  path {
+    stroke: $border-subtle;
+  }
+  line {
+    stroke: $border-subtle;
+  }
+  text {
+    display: none;
+  }
+}
+
+.raceChart-y-axis {
+  path {
+    stroke: $border-subtle;
+  }
+  line {
+    display: none;
+  }
+  text {
+    fill: $text-primary;
+  }
+}

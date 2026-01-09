@@ -1,0 +1,1 @@
+export const DEFAULT_AUTO_CLOSE_DELAY = 5000;

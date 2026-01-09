@@ -1,0 +1,719 @@
+.dark {
+  &-header {
+    header {
+      background: $white;
+      padding: 20px 0;
+      .header {
+        &-right {
+          ul {
+            li {
+              &.btn {
+                &.primary {
+                  &-btn {
+                    background: $accent-primary;
+                    box-shadow: 0 10px 20px -15px $accent-primary;
+                    a {
+                      color: $white;
+                    }
+                  }
+                }
+              }
+              a {
+                color: $text-secondary;
+              }
+            }
+          }
+          .menu {
+            &-bar {
+              background: #333333;
+              &::before,
+              &::after {
+                background: #333333;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.about {
+  &-wrapper {
+    background: $white;
+    .container {
+      max-width: 1100px;
+      width: 100%;
+      @media screen and (max-width: $sm-screen) {
+        padding: 0 25px;
+      }
+    }
+    .section {
+      &-title {
+        color: $text-secondary;
+        font-weight: 400;
+        font-size: 34px;
+        line-height: 43px;
+        margin-bottom: 60px;
+        @media screen and (max-width: $sm-screen) {
+          font-size: 20px;
+          line-height: 30px;
+          margin-bottom: 35px;
+        }
+        &::before {
+          content: '';
+          left: -170px;
+          width: 102px;
+          background: $border-subtle;
+          @media screen and (max-width: $sm-screen) {
+            display: none;
+          }
+        }
+        &::after {
+          left: -68px;
+          color: $border-subtle;
+          top: 28%;
+          border: 1px solid $border-subtle;
+          @media screen and (max-width: $sm-screen) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.eleventh {
+  &-block {
+    background: $white;
+    text-align: center;
+    font-size: 34px;
+    line-height: 43px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 30px);
+    @media screen and (max-width: $sm-screen) {
+      font-size: 20px;
+      line-height: 30px;
+      min-height: 100vh;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -45px;
+      width: 80%;
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+      border-top: 45px solid #fff;
+      border-left: 45px solid transparent;
+      border-right: 45px solid transparent;
+      z-index: 2;
+      @media screen and (max-width: $sm-screen) {
+        display: none;
+      }
+    }
+    .line14 {
+      position: absolute;
+      bottom: 130px;
+      left: 0;
+      width: 100%;
+      height: 50px;
+      @media screen and (max-width: $sm-screen) {
+        display: none;
+      }
+    }
+    .title {
+      color: $text-secondary;
+      letter-spacing: 2px;
+      margin-bottom: 65px;
+      position: relative;
+      @media screen and (max-width: $sm-screen) {
+        margin-bottom: 30px;
+      }
+      &::after {
+        content: '\25cf';
+        position: absolute;
+        left: 0;
+        font-size: 18px;
+        color: $border-subtle;
+        top: -35px;
+        height: 20px;
+        width: 20px;
+        border: 1px solid $border-subtle;
+        border-radius: 50%;
+        line-height: 15.9px;
+        text-indent: 3px;
+        right: 0;
+        margin: 0 auto;
+      }
+    }
+    .content {
+      line-height: 54px;
+      letter-spacing: 3px;
+      width: 70%;
+      @media screen and (max-width: $sm-screen) {
+        line-height: 30px;
+        width: 100%;
+        padding: 0 30px;
+      }
+    }
+  }
+}
+
+.twelveth {
+  &-block {
+    display: flex;
+    align-items: center;
+    position: relative;
+    @media screen and (max-width: $sm-screen) {
+      align-items: flex-start;
+      padding: 100px 0;
+      min-height: auto;
+    }
+
+    .line15 {
+      position: absolute;
+      top: 120px;
+      left: 0;
+      width: 155px;
+      height: 155px;
+      z-index: 1;
+      @media screen and (max-width: $sm-screen) {
+        display: none;
+      }
+    }
+
+    .line16 {
+      position: absolute;
+      bottom: 75px;
+      right: 0;
+      width: 155px;
+      height: 155px;
+      z-index: 1;
+      @media screen and (max-width: $sm-screen) {
+        display: none;
+      }
+    }
+
+    .section {
+      &-title {
+        color: $white;
+        position: relative;
+        z-index: 2;
+        font-size: 34px;
+        line-height: 43px;
+        letter-spacing: 2px;
+        margin-bottom: 60px;
+        @media screen and (max-width: $sm-screen) {
+          margin-bottom: 50px;
+          line-height: 54px;
+        }
+      }
+    }
+    .container {
+      max-width: 930px;
+    }
+    .section {
+      &-title {
+        &::before {
+          display: none;
+        }
+        &::after {
+          display: none;
+        }
+      }
+    }
+    .content {
+      color: $white;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 32px;
+      text-align: justify;
+      font-family: $font-primary;
+      position: relative;
+      z-index: 2;
+      @media screen and (max-width: $sm-screen) {
+        font-size: 12px;
+        line-height: 22px;
+        text-align: left;
+      }
+    }
+  }
+}
+
+// Core Values, Business Principles Starts
+
+.core {
+  &-block {
+    z-index: 2;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    @media screen and (max-width: $sm-screen) {
+      flex-direction: column;
+    }
+    &-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  &-grid {
+    width: 31%;
+    @media screen and (max-width: $sm-screen) {
+      width: 100%;
+      margin-bottom: 50px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &-count {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 18px;
+    font-family: $font-primary;
+  }
+  &-title {
+    font-size: 34px;
+    line-height: 43px;
+    margin: 30px 0 50px;
+    @media screen and (max-width: $sm-screen) {
+      font-size: 20px;
+      line-height: 30px;
+      margin: 5px 0;
+    }
+  }
+  &-content {
+    line-height: 28px;
+    font-weight: 500;
+    font-family: $font-primary;
+    opacity: 0.8;
+    @media screen and (max-width: $sm-screen) {
+      font-size: 12px;
+      line-height: 20px;
+    }
+  }
+}
+
+// Core Values, Business Principles Starts
+
+.thirteenth {
+  &-block {
+    display: flex;
+    align-items: center;
+    padding: 100px 0;
+    position: relative;
+    // &::before {
+    //   content: '';
+    //   position: absolute;
+    //   top: -30px;
+    //   width: 80%;
+    //   margin: 0 auto;
+    //   left: 0;
+    //   right: 0;
+    //   border-bottom: 30px solid #fff;
+    //   border-left: 30px solid transparent;
+    //   border-right: 30px solid transparent;
+    //   z-index: 2;
+    // }
+    .core {
+      &-count,
+      &-content {
+        color: $text-secondary;
+      }
+    }
+  }
+}
+
+.fourteenth {
+  &-block {
+    background: url('../images/About-us-Image2.png');
+    color: $white;
+    padding: 90px 0 150px;
+    @media screen and (max-width: $sm-screen) {
+      padding: 100px 0;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0px;
+      width: 80%;
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+      border-bottom: 30px solid #e6ecf2;
+      border-left: 30px solid transparent;
+      border-right: 30px solid transparent;
+      z-index: 2;
+      @media screen and (max-width: $sm-screen) {
+        display: none;
+      }
+    }
+    .section {
+      &-title {
+        color: $white;
+        &::before,
+        &::after {
+          opacity: 0.5;
+        }
+      }
+    }
+    .milestones {
+      &-block {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      &-grid {
+        flex: 0 0 50%;
+        margin-bottom: 80px;
+        &:nth-child(5),
+        &:nth-child(6) {
+          flex: 1 0 100%;
+        }
+        @media screen and (max-width: $sm-screen) {
+          flex: 0 0 100%;
+          margin-bottom: 50px;
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+      &-count {
+        font-size: 14px;
+        font-weight: 600;
+        font-family: $font-primary;
+        line-height: 18px;
+      }
+      &-title {
+        font-size: 34px;
+        line-height: 43px;
+        padding: 40px 0 25px;
+        letter-spacing: 2px;
+        @media screen and (max-width: $sm-screen) {
+          padding: 25px 0 15px;
+          font-size: 20px;
+          line-height: 30px;
+          letter-spacing: 1px;
+        }
+      }
+      &-timestamp {
+        opacity: 0.8;
+        line-height: 21px;
+      }
+    }
+  }
+}
+
+// .fifteenth {
+//   &-block {
+//     padding: 160px 0 220px;
+//     &::after {
+//       content: '';
+//       position: absolute;
+//       bottom: 0px;
+//       width: 80%;
+//       margin: 0 auto;
+//       left: 0;
+//       right: 0;
+//       border-bottom: 30px solid #e6ecf2;
+//       border-left: 30px solid transparent;
+//       border-right: 30px solid transparent;
+//       z-index: 2;
+//     }
+//   }
+// }
+
+.sixteenth {
+  &-block {
+    background: #e6ecf2;
+    padding: 160px 0;
+    @media screen and (max-width: $sm-screen) {
+      padding: 100px 0;
+      min-height: auto;
+    }
+    .container {
+      max-width: 930px;
+    }
+    .section {
+      &-title {
+        &::before {
+          left: -255px;
+          background: #d6e0ec;
+        }
+        &::after {
+          left: -153px;
+          color: #d6e0ec;
+          border-color: #d6e0ec;
+        }
+      }
+    }
+    .content {
+      color: $text-muted;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 28px;
+      font-family: $font-primary;
+      text-align: justify;
+      @media screen and (max-width: $sm-screen) {
+        font-size: 12px;
+        line-height: 20px;
+        text-align: left;
+      }
+    }
+  }
+}
+
+// Watch More Icon Starts
+
+.watch {
+  &-more {
+    display: inline-flex;
+    align-items: center;
+    color: $accent-primary;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: $font-primary;
+    line-height: 28px;
+    margin-top: 65px;
+    @media screen and (max-width: $sm-screen) {
+      font-size: 16px;
+      line-height: 24px;
+      margin-top: 35px;
+    }
+    &-icon {
+      height: 64px;
+      width: 64px;
+      background: #c8d4df;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 30px;
+      @media screen and (max-width: $sm-screen) {
+        height: 40px;
+        width: 40px;
+        margin-right: 15px;
+        svg {
+          height: 1.2rem !important;
+          width: 1.2rem !important;
+        }
+      }
+    }
+  }
+}
+
+// Watch More Icon Ends
+
+.seventeenth {
+  &-block {
+    padding: 130px 0;
+    @media screen and (max-width: $sm-screen) {
+      padding: 100px 0 60px;
+    }
+    .container {
+      max-width: 930px;
+    }
+    .section {
+      &-title {
+        margin-bottom: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @media screen and (max-width: $sm-screen) {
+          margin-bottom: 60px;
+        }
+        &::before {
+          left: -255px;
+        }
+        &::after {
+          left: -153px;
+        }
+        svg {
+          cursor: pointer;
+        }
+      }
+    }
+    .team {
+      &-block {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+    .user {
+      &-grid {
+        font-family: $font-primary;
+        font-weight: 500;
+        line-height: 28px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 1 0 33%;
+        margin-bottom: 100px;
+        @media screen and (max-width: $sm-screen) {
+          flex: 1 0 50%;
+          margin-bottom: 40px;
+        }
+        &:last-child,
+        &:nth-last-child(2),
+        &:nth-last-child(3) {
+          margin-bottom: 0;
+          @media screen and (max-width: $sm-screen) {
+            margin-bottom: 40px;
+          }
+        }
+        &:last-child {
+          @media screen and (max-width: $sm-screen) {
+            margin-bottom: 0;
+          }
+        }
+      }
+      &-image {
+        height: 150px;
+        width: 150px;
+        @media screen and (max-width: $sm-screen) {
+          width: 80px;
+          height: 80px;
+        }
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          border-radius: 50%;
+          box-shadow: 0 20px 20px -15px #dae5f4;
+        }
+      }
+      &-name {
+        padding: 30px 0 10px;
+        color: $text-secondary;
+        font-size: 22px;
+        text-align: center;
+        @media screen and (max-width: $sm-screen) {
+          font-size: 12px;
+          line-height: 20px;
+        }
+      }
+      &-designation {
+        color: #132c3f;
+        opacity: 0.5;
+        text-align: center;
+        @media screen and (max-width: $sm-screen) {
+          font-size: 12px;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+}
+
+// Video Block Starts
+
+.video {
+  &-block {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 130px;
+    @media screen and (max-width: $sm-screen) {
+      margin-bottom: 60px;
+    }
+    video {
+      border-radius: 10px;
+      box-shadow: 0 20px 20px -15px #dae5f4;
+      position: relative;
+      background: #fff;
+    }
+    .watch {
+      &-more {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 100%;
+        width: 100%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        color: #040f17;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out 0s;
+        &:hover {
+          color: $accent-primary;
+        }
+        &-icon {
+          margin: 0 auto;
+          position: relative;
+          &::before {
+            content: '\F40A';
+            font: normal normal normal 24px/1 'Material Design Icons';
+            font-size: 36px;
+            text-rendering: auto;
+            line-height: inherit;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            position: absolute;
+          }
+          &.play {
+            &::before {
+              content: '\F3E4';
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Video Block Ends
+
+.nineteenth {
+  &-block {
+    background: #e6ecf2;
+    color: $text-secondary;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 175px 0;
+    @media screen and (max-width: $sm-screen) {
+      padding: 100px 0;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      top: -50px;
+      width: 80%;
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+      border-bottom: 50px solid #e6ecf2;
+      border-left: 50px solid transparent;
+      border-right: 50px solid transparent;
+      z-index: 2;
+      @media screen and (max-width: $sm-screen) {
+        display: none;
+      }
+    }
+    .title {
+      position: relative;
+      z-index: 2;
+      font-size: 34px;
+      line-height: 43px;
+      letter-spacing: 2px;
+      margin-bottom: 60px;
+      @media screen and (max-width: $sm-screen) {
+        font-size: 20px;
+        line-height: 30px;
+        margin-bottom: 35px;
+      }
+    }
+  }
+}

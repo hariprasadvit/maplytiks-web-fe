@@ -1,0 +1,662 @@
+.geoChart {
+  position: relative;
+  &__search {
+    position: absolute;
+    top: -4px;
+    right: 21px;
+    width: 203px;
+    &__heading {
+      display: flex;
+      color: #829cb4;
+      font-family: Montserrat;
+      font-size: 11px;
+      font-weight: bold;
+      line-height: 10px;
+      justify-content: space-between;
+    }
+    &__input {
+      display: flex;
+      padding-top: 9.5px;
+      padding-bottom: 9.5px;
+      input {
+        width: 100%;
+        height: 41px;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        border: 1px solid #d9e3e5;
+        padding: 0 10px;
+      }
+    }
+    &__list {
+      max-height: 170px;
+      overflow: scroll;
+      padding-right: 15px;
+      div {
+        display: flex;
+        justify-content: space-between;
+      }
+      span {
+        padding: 6px 0px;
+        color: #829cb4;
+        font-family: Montserrat;
+        font-size: 11px;
+        line-height: 15px;
+      }
+    }
+  }
+  text {
+    fill: #829cb4;
+    font-size: 12px;
+  }
+}
+
+.heatmapTooltip {
+  position: absolute;
+  visibility: hidden;
+  min-width: 131px;
+  min-height: 68px;
+  background: #000000;
+  padding: 15px;
+  font-size: 11px;
+  color: #a0a0a0;
+}
+
+.socialheatmap {
+  margin-left: 15%;
+}
+
+.socialGeo_App {
+  font-family: sans-serif;
+  text-align: center;
+  /* margin: auto;
+  max-width: 1400px; */
+}
+
+.socialGeo_h1 {
+  font-size: 28px;
+  padding: 0px;
+  margin: 0px;
+  /* line-height: 100px; */
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
+  /* width: 310px; */
+  /* float: left; */
+}
+
+.socialGeo_banner {
+  width: 350px;
+  height: 30px;
+  margin: 7px auto;
+  text-align: center;
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding-left: 190px; */
+}
+
+.socialGeo_banner6 {
+  color: #37535b;
+  background: #b8d8fb;
+  font-family: "Arial Narrow";
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+.socialGeo_cardsUi {
+  display: flex;
+  flex: 1;
+  /* max-height: 600px;
+  overflow-y: scroll; */
+}
+.socialGeo_donutUi {
+  display: flex;
+  flex: 1;
+  /* align-items: flex-start; */
+  justify-content: flex-Start;
+  /* border-right: 1px solid black; */
+}
+.socialGeo_geoData {
+  display: flex;
+  flex: 2;
+  justify-content: space-evenly;
+}
+.socialGeo_cardsRightUi {
+  display: flex;
+  flex: 3;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+.socialGeo_dateSelector {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+}
+
+.socialGeo_textDashed {
+  font-weight: bold !important;
+  text-decoration: underline !important;
+  text-decoration-style: dashed !important;
+  cursor: pointer;
+}
+
+.socialGeo_detailsHash {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.socialGeo_detailsHashHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.socialGeo_brand {
+  width: 100px;
+  /* margin: 0 0px 0 50px; */
+}
+
+.socialGeo_likesRowC1 {
+  justify-content: center;
+}
+.socialGeo_detailsFooter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+.socialGeo_detailsFooterText {
+  width: 100%;
+  font-weight: bold !important;
+  text-align: center;
+}
+
+.socialGeo_progress {
+  width: 100px;
+  height: 10px;
+}
+
+.socialGeo_progressRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.socialGeo_progressHover {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  padding: 0 10px;
+  border-radius: 10px;
+  transition: transform 0.2s;
+  border-left-width: 8px;
+}
+
+.socialGeo_verticalColor {
+  background-color: rgb(0, 98, 204);
+  text-transform: capitalize;
+}
+
+.socialGeo_vertical {
+  text-transform: capitalize;
+}
+
+.socialGeo_detailsFooter:hover .socialGeo_iconColor,
+.socialGeo_detailsFooter:hover,
+.socialGeo_detailshashHover:hover,
+.socialGeo_progressHover:hover {
+  color: #890b0f;
+}
+
+.socialGeo_progressHover:hover {
+  transform: scale(1.1);
+}
+
+.socialGeo_parent {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 100px;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  align-items: center;
+}
+
+.socialGeo_div1 {
+  grid-area: 1 / 1 / 2 / 3;
+}
+.socialGeo_div2 {
+  grid-area: 1 / 3 / 2 / 5;
+  display: grid;
+  justify-content: end;
+  grid-auto-flow: column;
+}
+
+.socialGeo_footerText {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* width: 50%; */
+  margin: 5px 0;
+}
+.socialGeo_footerTextCenter {
+  display: flex;
+  align-items: center;
+}
+
+.socialGeo_verticalSelector {
+  display: flex;
+  align-items: flex-start;
+  /* flex: 1; */
+  margin-top: 50px;
+}
+.socialGeo_profileCards {
+  display: flex;
+}
+
+.socialGeo_brandImage {
+  height: 50px;
+  margin-top: -50px;
+  background: white;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.socialGeo_cards_camp {
+  min-width: 300px;
+  max-width: 1280px;
+  background: #ffffff;
+  border-radius: 20px;
+  border: 1px solid #262626;
+  margin: 20px;
+  padding: 10px;
+  text-align: left;
+}
+
+.socialGeo_tabRows {
+  font-weight: bold !important;
+  margin: 10px 0 !important;
+}
+.socialGeo_profileNames {
+  display: flex;
+  align-items: center;
+  justify-content: flex-Start;
+  width: 100%;
+}
+
+.socialGeo_profileNamesGeo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-transform: capitalize;
+  color: black;
+}
+.socialGeo_geoTabCenter {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.socialGeo_tabRows:hover a,
+.socialGeo_tabRows:hover {
+  color: #890b0f;
+}
+
+.socialGeo_tabRows2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote p {
+  display: inline;
+}
+
+/* repeat  */
+
+.socialGeo_cards_ranking {
+  min-width: 300px;
+  max-width: 300px;
+  /* max-height: 360px; */
+  /* min-height: 360px; */
+  background: #ffffff;
+  border-radius: 20px;
+  border: 1px solid #262626;
+  /* background-size: 100px;
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-position-y: -5%; */
+  margin: 20px;
+  padding: 10px;
+  text-align: left;
+}
+.socialGeo_cards_ranking_Hashtags {
+  min-width: 280px;
+  max-width: 280px;
+  background: #ffffff;
+  border-radius: 20px;
+  border: 1px solid #262626;
+  margin: 20px;
+  padding: 10px;
+  text-align: left;
+  height: 95px;
+  display: flex;
+  justify-content: center;
+  border-left-width: 10px;
+}
+
+.socialGeo_rankImg {
+  width: 50px;
+  /* margin-left: -10%;
+  margin-top: -12%; */
+  /* background-color: white; */
+  /* border-radius: 35%;
+  position: absolute; */
+}
+
+.socialGeo_cards_ranking:hover {
+  box-shadow: 5px 5px 10px #890b0f, -5px -5px 10px #ffffff !important;
+}
+
+.socialGeo_avatarRow {
+  display: flex;
+  margin: 0 auto 20px auto;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.socialGeo_logoBrand {
+  width: 70px !important;
+  height: 70px !important;
+  margin-right: 10px;
+}
+
+.socialGeo_content_ranking {
+  margin: 20px auto 5px auto;
+  max-height: 70px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.socialGeo_footer_ranking {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  /* background-color: #fff; */
+  margin: 15px auto 20px auto;
+  padding: 5px;
+  border-radius: 10px;
+  /* border: 1px solid rgba(0,0,0,0.4); */
+  color: #890b0f;
+}
+.socialGeo_footer_ranking2 {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: silver;
+  margin: 15px auto 20px auto;
+  padding: 5px;
+  border-radius: 10px;
+}
+.socialGeo_footer_ranking3 {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: chocolate;
+  margin: 15px auto 20px auto;
+  padding: 5px;
+  border-radius: 10px;
+}
+.socialGeo_footer_ranking4 {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #3d3b3b;
+  margin: 15px auto 20px auto;
+  padding: 5px;
+  border-radius: 10px;
+  color: white;
+}
+
+.socialGeo_handle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* .socialGeo_twitterIcon {
+  color: #43b1f4;
+}
+
+.socialGeo_facebookIcon {
+  color: #3b579d;
+}
+
+.socialGeo_instagramIcon {
+  color: #b9007d;
+} */
+
+.socialGeo_link {
+  display: flex;
+  text-decoration: none !important;
+  color: black !important;
+  width: 100%;
+  align-items: center;
+}
+
+.socialGeo_dateTime {
+  margin: 5px auto;
+  color: #262626;
+}
+
+.socialGeo_likesRow {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px auto 0px auto;
+}
+
+.socialGeo_likesRowC1 {
+  display: flex;
+  margin-bottom: 10px;
+  width: 33.33%;
+  cursor: pointer;
+  justify-content: center;
+}
+
+.socialGeo_likesRowC1:hover .socialGeo_iconColor,
+.socialGeo_likesRowC1:hover {
+  color: #890b0f;
+}
+
+.socialGeo_iconColor {
+  color: #3d3b3b;
+}
+
+.socialGeo_commentsRow {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  flex-wrap: wrap;
+  margin: 10px auto 0px auto;
+}
+
+.socialGeo_commentsRowText {
+  width: 75%;
+}
+/* card2 */
+
+.socialGeo_logoBrand2 {
+  width: 70px !important;
+  height: 70px !important;
+  margin-right: 10px;
+  object-fit: contain !important;
+}
+
+.socialGeo_avatarRow2 {
+  display: flex;
+  margin: 0 auto 10px auto;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.socialGeo_commentsRow2 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.socialGeo_cardsFooter {
+  /* height: 100px; */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  /* justify-content: space-between; */
+}
+
+.socialGeo_cardFooterMain {
+  /* border: 1px solid #ccc; */
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.socialGeo_footerImage {
+  height: 20px;
+  margin-bottom: 10px;
+}
+
+.socialGeo_assetImages {
+  width: 250px;
+}
+
+.socialGeo_brandDetails {
+  display: flex;
+  margin-top: 10px;
+}
+.socialGeo_brandDetailsIcon {
+  display: flex;
+  width: 50%;
+}
+
+.socialGeo_CircleDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  // height: 200px;
+  margin-top: 15px;
+}
+.socialGeo_filterSocial {
+  display: flex;
+  justify-content: flex-end;
+}
+.socialGeo_filterSocialIcons {
+  margin: 0 10px;
+}
+
+.socialGeo_filterSocialIcons:hover {
+  background: #ffffff;
+  box-shadow: 5px 5px 10px #d9d9d9, -5px -5px 10px #ffffff !important;
+}
+
+.socialGeo_fbIcon {
+  /* color: #3b5998; */
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+.socialGeo_instaIcon {
+  /* color: #c333af; */
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+.socialGeo_twitterIcon {
+  /* color: #28a8e0; */
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+
+.socialGeo_fbIconClick {
+  color: #3b5998;
+  border: 1px solid rgba(0, 0, 0, 1);
+  border-radius: 5px;
+}
+.socialGeo_instaIconClick {
+  color: #c333af;
+  border: 1px solid rgba(0, 0, 0, 1);
+  border-radius: 5px;
+}
+.socialGeo_twitterIconClick {
+  color: #28a8e0;
+  border: 1px solid rgba(0, 0, 0, 1);
+  border-radius: 5px;
+}
+.socialGeo_filterLists {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  height: 50px;
+  width: 130px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+.socialGeo_filterLists:hover {
+  background: #ffffff;
+  box-shadow: 5px 5px 10px #d9d9d9, -5px -5px 10px #ffffff !important;
+}
+
+.socialGeo_filterListsIcon {
+  margin: 0 10px;
+}
+.socialGeo_formControl {
+  /* width: 100%; */
+}
+.socialGeo_batTip {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 150px;
+}
+.socialGeo_ViewMore {
+  margin-top: 60px;
+  display: flex;
+  padding: 1em;
+  border: 1px solid #262626;
+  border-radius: 10px;
+  width: max-content;
+}
+
+.socialGeo_ViewMore:hover {
+  box-shadow: 3px 3px 10px #890b0f, -5px -5px 10px #ffffff !important;
+}
+.socialGeo_Box {
+  display: flex;
+  align-items: center;
+  width: 200px;
+  height: 230px;
+  justify-content: space-evenly;
+}

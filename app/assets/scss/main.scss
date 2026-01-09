@@ -1,0 +1,30 @@
+// @import 'vendors/bootstrap/dist/css/bootstrap';
+//base
+@import 'utils/_mixins';
+@import 'base/_typography';
+@import 'base/_vars';
+@import 'base/_common';
+
+//misc settings
+@import 'utils/_settings';
+//icons
+// @import 'vendors/_materialdesignicons';
+//global things
+@import 'base/_reset';
+//components
+@import 'components/_buttons';
+@import 'components/_navigation';
+
+//layout
+@import 'layout/_footer';
+@import 'layout/_header';
+@import 'layout/_sidebar';
+@import 'layout/_main';
+
+//pages
+@import 'pages/_home';
+@import 'pages/_contact';
+@import 'pages/_about';
+
+@import '~slick-carousel/slick/slick.css';
+@import '~slick-carousel/slick/slick-theme.css';

@@ -1,0 +1,18 @@
+{
+  "extends": ["wesbos"],
+  "rules": {
+    "no-unused-vars": "warn",
+    "import/no-unresolved": "warn",
+    "react/prop-types": "warn",
+    "react/destructuring-assignment": 0,
+    "jsx-a11y/click-events-have-key-events": 0,
+    "jsx-a11y/no-noninteractive-element-interactions": 0,
+    "react/no-multi-comp": 0,
+    "jsx-a11y/no-static-element-interactions": 0,
+    "no-nested-ternary": 0,
+    "camelcase": 0,
+    "prefer-destructuring": 0,
+    "jsx-a11y/alt-text": 0,
+    "react/no-unused-state": 0
+  }
+}

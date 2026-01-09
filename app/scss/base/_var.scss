@@ -1,0 +1,64 @@
+/**
+ * Matra Design System Variables
+ * Sci-Fi/Tech Theme with Orange Accents
+ */
+
+// ====================================
+// Legacy Color Variables (Updated for Dark Theme)
+// ====================================
+
+$text1: #ffffff;
+$text2: #FF6B35;
+$text3: #B8B8B8;
+$text4: #6B6B6B;
+$text5: #4A4A4A;
+
+$primary: #1a1a1a;
+$secondary: #141414;
+$border: #333333;
+
+$charNum15: 15;
+$charNum10: 10;
+$charNum5: 5;
+$charNum1: 1;
+
+$footer1: #0d0d0d;
+$footer2: #080808;
+
+$white: #ffffff;
+$dark: #0d0d0d;
+$lightGray: #1a1a1a;
+$shadowGrey: #000000;
+$inputGrey: #1f1f1f;
+$lightpink: #FF8C5A;
+$pink: #FF6B35;  // Changed from red to Matra Orange
+$green: #00D68F;
+
+$sm-screen: 767px;
+
+// ====================================
+// Typography - Sci-Fi/Tech Fonts
+// ====================================
+
+// Primary: Rajdhani - Modern tech/industrial feel
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+// Secondary: Space Grotesk - Clean geometric tech font
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+// Accent: Orbitron - Futuristic display font for headings
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+
+// Mono: JetBrains Mono - For data/numbers
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
+
+// Font Family Variables
+$font-primary: 'Rajdhani', 'Space Grotesk', -apple-system, sans-serif;
+$font-display: 'Orbitron', 'Rajdhani', sans-serif;
+$font-mono: 'JetBrains Mono', 'Consolas', monospace;
+$font-fallback: 'Space Grotesk', sans-serif;
+
+// Legacy support
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+
+@import url('https://code.iconify.design/1/1.0.3/iconify.min.js');

@@ -1,0 +1,235 @@
+/**
+ * Matra Dark Theme
+ * Premium dark dashboard with orange accent - inspired by modern fintech design
+ */
+
+// ====================================
+// Background Colors
+// ====================================
+
+$dark-bg-primary: #0d0d0d;      // Pure dark - main background
+$dark-bg-secondary: #141414;    // Slightly lighter - secondary surfaces
+$dark-bg-card: #1a1a1a;         // Card background
+$dark-bg-elevated: #1f1f1f;     // Elevated card background
+$dark-bg-overlay: rgba(13, 13, 13, 0.95); // Modal overlay
+$dark-bg-sidebar: #111111;      // Sidebar background
+
+// ====================================
+// Brand Colors (Matra Orange)
+// ====================================
+
+$brand-primary: #FF6B35;        // Matra orange - primary brand color
+$brand-secondary: #FF8C5A;      // Lighter orange
+$brand-dark: #E55A2B;           // Darker orange for hover
+
+// ====================================
+// Accent Colors
+// ====================================
+
+$accent-primary: #FF6B35;       // Matra orange - primary accent
+$accent-secondary: #FFB347;     // Gold/amber - secondary accent
+$accent-tertiary: #FF8C5A;      // Light orange - tertiary accent
+$accent-hover: #FF8C5A;         // Hover state
+$accent-success: #00D68F;       // Success green (bright, modern)
+$accent-warning: #FFAA00;       // Warning amber
+$accent-error: #FF4757;         // Error red
+
+// ====================================
+// Text Colors - High Contrast
+// ====================================
+
+$text-primary: #FFFFFF;         // Pure white - primary text (maximum contrast)
+$text-secondary: #B8B8B8;       // Light gray - secondary text
+$text-muted: #6B6B6B;           // Medium gray - muted/placeholder text
+$text-inverse: #0d0d0d;         // For light backgrounds
+$text-accent: #FF6B35;          // Orange accent text
+$text-white: #FFFFFF;           // Pure white for emphasis
+$text-heading: #FFFFFF;         // Headings always white
+
+// ====================================
+// Border Colors
+// ====================================
+
+$border-default: rgba(255, 107, 53, 0.15);  // Orange tinted border
+$border-hover: rgba(255, 107, 53, 0.4);     // Hover border
+$border-active: rgba(255, 107, 53, 0.6);    // Active border
+$border-subtle: rgba(255, 255, 255, 0.06);  // Very subtle border
+$border-muted: rgba(255, 255, 255, 0.1);    // Muted border
+$border-card: rgba(255, 255, 255, 0.08);    // Card borders
+
+// ====================================
+// Glassmorphism
+// ====================================
+
+$glass-bg-default: rgba(26, 26, 26, 0.8);   // Default glass background
+$glass-bg-light: rgba(26, 26, 26, 0.6);     // Light glass
+$glass-bg-heavy: rgba(26, 26, 26, 0.95);    // Heavy glass
+$glass-border: rgba(255, 107, 53, 0.15);    // Glass border (orange tint)
+$glass-border-hover: rgba(255, 107, 53, 0.35); // Glass hover border
+$glass-blur: 12px;                           // Default blur amount
+$glass-blur-light: 6px;                      // Light blur
+$glass-blur-heavy: 20px;                     // Heavy blur
+
+// ====================================
+// Shadow & Glow Effects
+// ====================================
+
+$shadow-default: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+$shadow-elevated: 0 12px 48px 0 rgba(0, 0, 0, 0.6);
+$shadow-subtle: 0 4px 16px 0 rgba(0, 0, 0, 0.3);
+$shadow-card: 0 4px 24px rgba(0, 0, 0, 0.4);
+
+$glow-primary: 0 0 20px rgba(255, 107, 53, 0.25);
+$glow-secondary: 0 0 20px rgba(255, 179, 71, 0.2);
+$glow-tertiary: 0 0 20px rgba(255, 140, 90, 0.2);
+$glow-hover: 0 0 30px rgba(255, 107, 53, 0.4);
+$glow-active: 0 0 40px rgba(255, 107, 53, 0.5);
+
+$glow-inset: inset 0 0 20px rgba(255, 107, 53, 0.03);
+$glow-inset-strong: inset 0 0 30px rgba(255, 107, 53, 0.06);
+
+// ====================================
+// Gradients
+// ====================================
+
+$gradient-primary: linear-gradient(135deg, #FF6B35 0%, #FF8C5A 100%);
+$gradient-secondary: linear-gradient(135deg, #FFB347 0%, #FF9500 100%);
+$gradient-tertiary: linear-gradient(135deg, #FF8C5A 0%, #FF6B35 100%);
+$gradient-accent: linear-gradient(90deg, #FF6B35 0%, #FFB347 50%, #FF8C5A 100%);
+$gradient-chart: linear-gradient(180deg, rgba(255, 107, 53, 0.4) 0%, rgba(255, 107, 53, 0.05) 100%);
+
+// Overlay gradients
+$gradient-overlay-top: linear-gradient(180deg, rgba(13, 13, 13, 0.9) 0%, transparent 100%);
+$gradient-overlay-bottom: linear-gradient(0deg, rgba(13, 13, 13, 0.9) 0%, transparent 100%);
+
+// ====================================
+// State Colors
+// ====================================
+
+$state-success-bg: rgba(0, 214, 143, 0.1);
+$state-success-border: rgba(0, 214, 143, 0.3);
+$state-success-text: #00D68F;
+
+$state-warning-bg: rgba(255, 170, 0, 0.1);
+$state-warning-border: rgba(255, 170, 0, 0.3);
+$state-warning-text: #FFAA00;
+
+$state-error-bg: rgba(255, 71, 87, 0.1);
+$state-error-border: rgba(255, 71, 87, 0.3);
+$state-error-text: #FF4757;
+
+$state-info-bg: rgba(255, 107, 53, 0.1);
+$state-info-border: rgba(255, 107, 53, 0.3);
+$state-info-text: #FF6B35;
+
+// ====================================
+// Chart Colors
+// ====================================
+
+$chart-color-1: #FF6B35;  // Matra orange
+$chart-color-2: #FFB347;  // Gold
+$chart-color-3: #00D68F;  // Green
+$chart-color-4: #FF8C5A;  // Light orange
+$chart-color-5: #00D68F;  // Success green
+$chart-color-6: #FFAA00;  // Amber
+$chart-color-7: #FF4757;  // Red
+$chart-color-8: #B8B8B8;  // Gray
+
+$chart-axis: rgba(255, 255, 255, 0.2);
+$chart-grid: rgba(255, 255, 255, 0.06);
+$chart-text: #B8B8B8;
+
+// ====================================
+// Z-Index System
+// ====================================
+
+$z-base: 1;
+$z-dropdown: 100;
+$z-sticky: 200;
+$z-fixed: 300;
+$z-modal-backdrop: 400;
+$z-modal: 500;
+$z-popover: 600;
+$z-tooltip: 700;
+$z-notification: 800;
+
+// ====================================
+// Transition Timing
+// ====================================
+
+$transition-fast: 150ms;
+$transition-base: 300ms;
+$transition-slow: 500ms;
+
+$ease-default: cubic-bezier(0.4, 0, 0.2, 1);
+$ease-in: cubic-bezier(0.4, 0, 1, 1);
+$ease-out: cubic-bezier(0, 0, 0.2, 1);
+$ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+
+// ====================================
+// Pattern Configuration
+// ====================================
+
+$pattern-dot-color: rgba(255, 107, 53, 0.03);
+$pattern-dot-size: 24px;
+$pattern-grid-color: rgba(255, 255, 255, 0.015);
+$pattern-grid-size: 50px;
+$pattern-opacity-default: 0.25;
+$pattern-opacity-subtle: 0.12;
+$pattern-opacity-mobile: 0.08;
+
+// ====================================
+// Spacing Scale
+// ====================================
+
+$space-xs: 4px;
+$space-sm: 8px;
+$space-md: 12px;
+$space-lg: 16px;
+$space-xl: 20px;
+$space-2xl: 24px;
+$space-3xl: 32px;
+$space-4xl: 40px;
+$space-5xl: 48px;
+
+// ====================================
+// Border Radius
+// ====================================
+
+$radius-sm: 4px;
+$radius-md: 8px;
+$radius-lg: 12px;
+$radius-xl: 16px;
+$radius-2xl: 20px;
+$radius-full: 9999px;
+
+// ====================================
+// Typography Weights
+// ====================================
+
+$weight-light: 300;
+$weight-regular: 400;
+$weight-medium: 500;
+$weight-semibold: 600;
+$weight-bold: 700;
+$weight-extrabold: 800;
+$weight-black: 900;
+
+// ====================================
+// Utility Functions
+// ====================================
+
+// Create color with opacity
+@function rgba-color($color, $opacity) {
+  @return rgba($color, $opacity);
+}
+
+// Lighten dark theme color
+@function lighten-dark($color, $amount) {
+  @return lighten($color, $amount);
+}
+
+// Darken dark theme color
+@function darken-dark($color, $amount) {
+  @return darken($color, $amount);
+}

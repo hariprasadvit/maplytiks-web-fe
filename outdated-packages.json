@@ -1,0 +1,1031 @@
+{
+  "@babel/cli": {
+    "current": "7.4.3",
+    "wanted": "7.4.3",
+    "latest": "7.28.3",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/@babel/cli"
+  },
+  "@babel/core": {
+    "current": "7.4.3",
+    "wanted": "7.4.3",
+    "latest": "7.28.5",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/@babel/core"
+  },
+  "@babel/plugin-proposal-class-properties": {
+    "current": "7.4.0",
+    "wanted": "7.4.0",
+    "latest": "7.18.6",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/@babel/plugin-proposal-class-properties"
+  },
+  "@babel/plugin-syntax-dynamic-import": {
+    "current": "7.2.0",
+    "wanted": "7.2.0",
+    "latest": "7.8.3",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/@babel/plugin-syntax-dynamic-import"
+  },
+  "@babel/plugin-transform-modules-commonjs": {
+    "current": "7.4.3",
+    "wanted": "7.4.3",
+    "latest": "7.27.1",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/@babel/plugin-transform-modules-commonjs"
+  },
+  "@babel/plugin-transform-react-constant-elements": {
+    "current": "7.2.0",
+    "wanted": "7.2.0",
+    "latest": "7.27.1",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/@babel/plugin-transform-react-constant-elements"
+  },
+  "@babel/plugin-transform-react-inline-elements": {
+    "current": "7.2.0",
+    "wanted": "7.2.0",
+    "latest": "7.27.1",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/@babel/plugin-transform-react-inline-elements"
+  },
+  "@babel/polyfill": {
+    "current": "7.4.3",
+    "wanted": "7.4.3",
+    "latest": "7.12.1",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/@babel/polyfill"
+  },
+  "@babel/preset-env": {
+    "current": "7.4.3",
+    "wanted": "7.4.3",
+    "latest": "7.28.5",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/@babel/preset-env"
+  },
+  "@babel/preset-react": {
+    "current": "7.0.0",
+    "wanted": "7.0.0",
+    "latest": "7.28.5",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/@babel/preset-react"
+  },
+  "@babel/register": {
+    "current": "7.4.0",
+    "wanted": "7.4.0",
+    "latest": "7.28.3",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/@babel/register"
+  },
+  "@fortawesome/fontawesome-svg-core": {
+    "current": "1.2.28",
+    "wanted": "1.2.28",
+    "latest": "7.1.0",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/@fortawesome/fontawesome-svg-core"
+  },
+  "@fortawesome/free-solid-svg-icons": {
+    "current": "5.13.0",
+    "wanted": "5.13.0",
+    "latest": "7.1.0",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/@fortawesome/free-solid-svg-icons"
+  },
+  "@fortawesome/react-fontawesome": {
+    "current": "0.1.9",
+    "wanted": "0.1.9",
+    "latest": "3.1.1",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/@fortawesome/react-fontawesome"
+  },
+  "@material-ui/core": {
+    "current": "4.11.0",
+    "wanted": "4.12.4",
+    "latest": "4.12.4",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/@material-ui/core"
+  },
+  "@material-ui/icons": {
+    "current": "4.9.1",
+    "wanted": "4.11.3",
+    "latest": "4.11.3",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/@material-ui/icons"
+  },
+  "@mdi/font": {
+    "current": "3.9.97",
+    "wanted": "3.9.97",
+    "latest": "7.4.47",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/@mdi/font"
+  },
+  "@mdi/js": {
+    "current": "3.9.97",
+    "wanted": "3.9.97",
+    "latest": "7.4.47",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/@mdi/js"
+  },
+  "@mdi/react": {
+    "current": "1.4.0",
+    "wanted": "1.6.1",
+    "latest": "1.6.1",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/@mdi/react"
+  },
+  "add-asset-html-webpack-plugin": {
+    "current": "3.1.3",
+    "wanted": "3.1.3",
+    "latest": "6.0.0",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/add-asset-html-webpack-plugin"
+  },
+  "axios": {
+    "current": "0.18.1",
+    "wanted": "0.18.1",
+    "latest": "1.13.2",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/axios"
+  },
+  "babel-core": {
+    "current": "7.0.0-bridge.0",
+    "wanted": "7.0.0-bridge.0",
+    "latest": "6.26.3",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/babel-core"
+  },
+  "babel-eslint": {
+    "current": "9.0.0",
+    "wanted": "9.0.0",
+    "latest": "10.1.0",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/babel-eslint"
+  },
+  "babel-loader": {
+    "current": "8.0.5",
+    "wanted": "8.0.5",
+    "latest": "10.0.0",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/babel-loader"
+  },
+  "babel-plugin-dynamic-import-node": {
+    "current": "2.2.0",
+    "wanted": "2.2.0",
+    "latest": "2.3.3",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/babel-plugin-dynamic-import-node"
+  },
+  "babel-plugin-react-intl": {
+    "current": "3.0.1",
+    "wanted": "3.0.1",
+    "latest": "8.2.25",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/babel-plugin-react-intl"
+  },
+  "babel-plugin-styled-components": {
+    "current": "1.10.0",
+    "wanted": "1.10.0",
+    "latest": "2.1.4",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/babel-plugin-styled-components"
+  },
+  "bootstrap": {
+    "current": "4.5.2",
+    "wanted": "4.6.2",
+    "latest": "5.3.8",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/bootstrap"
+  },
+  "chalk": {
+    "current": "2.4.2",
+    "wanted": "2.4.2",
+    "latest": "5.6.2",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/chalk"
+  },
+  "circular-dependency-plugin": {
+    "current": "5.0.2",
+    "wanted": "5.0.2",
+    "latest": "5.2.2",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/circular-dependency-plugin"
+  },
+  "compare-versions": {
+    "current": "3.4.0",
+    "wanted": "3.4.0",
+    "latest": "6.1.1",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/compare-versions"
+  },
+  "compression": {
+    "current": "1.7.4",
+    "wanted": "1.7.4",
+    "latest": "1.8.1",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/compression"
+  },
+  "compression-webpack-plugin": {
+    "current": "2.0.0",
+    "wanted": "2.0.0",
+    "latest": "11.1.0",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/compression-webpack-plugin"
+  },
+  "connected-react-router": {
+    "current": "6.4.0",
+    "wanted": "6.4.0",
+    "latest": "6.9.3",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/connected-react-router"
+  },
+  "coveralls": {
+    "current": "3.0.3",
+    "wanted": "3.0.3",
+    "latest": "3.1.1",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/coveralls"
+  },
+  "cross-env": {
+    "current": "5.2.1",
+    "wanted": "5.2.1",
+    "latest": "10.1.0",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/cross-env"
+  },
+  "css-loader": {
+    "current": "2.1.1",
+    "wanted": "2.1.1",
+    "latest": "7.1.2",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/css-loader"
+  },
+  "d3": {
+    "current": "5.16.0",
+    "wanted": "5.16.0",
+    "latest": "7.9.0",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/d3"
+  },
+  "d3-cloud": {
+    "current": "1.2.5",
+    "wanted": "1.2.8",
+    "latest": "1.2.8",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/d3-cloud"
+  },
+  "d3-geo": {
+    "current": "1.12.1",
+    "wanted": "1.12.1",
+    "latest": "3.1.1",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/d3-geo"
+  },
+  "eslint": {
+    "current": "5.16.0",
+    "wanted": "5.16.0",
+    "latest": "9.39.1",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/eslint"
+  },
+  "eslint-config-airbnb": {
+    "current": "17.1.1",
+    "wanted": "17.1.1",
+    "latest": "19.0.4",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/eslint-config-airbnb"
+  },
+  "eslint-config-airbnb-base": {
+    "current": "13.1.0",
+    "wanted": "13.1.0",
+    "latest": "15.0.0",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/eslint-config-airbnb-base"
+  },
+  "eslint-config-prettier": {
+    "current": "4.3.0",
+    "wanted": "4.3.0",
+    "latest": "10.1.8",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/eslint-config-prettier"
+  },
+  "eslint-config-wesbos": {
+    "current": "0.0.19",
+    "wanted": "0.0.19",
+    "latest": "4.3.2",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/eslint-config-wesbos"
+  },
+  "eslint-import-resolver-webpack": {
+    "current": "0.11.1",
+    "wanted": "0.11.1",
+    "latest": "0.13.10",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/eslint-import-resolver-webpack"
+  },
+  "eslint-plugin-html": {
+    "current": "5.0.5",
+    "wanted": "5.0.5",
+    "latest": "8.1.3",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/eslint-plugin-html"
+  },
+  "eslint-plugin-import": {
+    "current": "2.22.1",
+    "wanted": "2.32.0",
+    "latest": "2.32.0",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/eslint-plugin-import"
+  },
+  "eslint-plugin-jsx-a11y": {
+    "current": "6.3.1",
+    "wanted": "6.10.2",
+    "latest": "6.10.2",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/eslint-plugin-jsx-a11y"
+  },
+  "eslint-plugin-prettier": {
+    "current": "3.1.4",
+    "wanted": "3.4.1",
+    "latest": "5.5.4",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/eslint-plugin-prettier"
+  },
+  "eslint-plugin-react": {
+    "current": "7.21.2",
+    "wanted": "7.37.5",
+    "latest": "7.37.5",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/eslint-plugin-react"
+  },
+  "eslint-plugin-react-hooks": {
+    "current": "1.7.0",
+    "wanted": "1.7.0",
+    "latest": "7.0.1",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/eslint-plugin-react-hooks"
+  },
+  "eslint-plugin-redux-saga": {
+    "current": "1.0.0",
+    "wanted": "1.0.0",
+    "latest": "1.3.2",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/eslint-plugin-redux-saga"
+  },
+  "express": {
+    "current": "4.16.4",
+    "wanted": "4.16.4",
+    "latest": "5.2.1",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/express"
+  },
+  "file-loader": {
+    "current": "3.0.1",
+    "wanted": "3.0.1",
+    "latest": "6.2.0",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/file-loader"
+  },
+  "fontfaceobserver": {
+    "current": "2.1.0",
+    "wanted": "2.1.0",
+    "latest": "2.3.0",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/fontfaceobserver"
+  },
+  "history": {
+    "current": "4.9.0",
+    "wanted": "4.9.0",
+    "latest": "5.3.0",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/history"
+  },
+  "hoist-non-react-statics": {
+    "current": "3.3.0",
+    "wanted": "3.3.0",
+    "latest": "3.3.2",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/hoist-non-react-statics"
+  },
+  "html-loader": {
+    "current": "0.5.5",
+    "wanted": "0.5.5",
+    "latest": "5.1.0",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/html-loader"
+  },
+  "html-webpack-plugin": {
+    "current": "3.2.0",
+    "wanted": "3.2.0",
+    "latest": "5.6.5",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/html-webpack-plugin"
+  },
+  "image-webpack-loader": {
+    "current": "4.5.0",
+    "wanted": "4.5.0",
+    "latest": "8.1.0",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/image-webpack-loader"
+  },
+  "img-loader": {
+    "current": "3.0.2",
+    "wanted": "3.0.2",
+    "latest": "4.0.0",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/img-loader"
+  },
+  "imports-loader": {
+    "current": "0.8.0",
+    "wanted": "0.8.0",
+    "latest": "5.0.0",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/imports-loader"
+  },
+  "ip": {
+    "current": "1.1.5",
+    "wanted": "1.1.5",
+    "latest": "2.0.1",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/ip"
+  },
+  "jest-cli": {
+    "current": "24.7.1",
+    "wanted": "24.7.1",
+    "latest": "29.7.0",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/jest-cli"
+  },
+  "jest-dom": {
+    "current": "3.1.3",
+    "wanted": "3.1.3",
+    "latest": "4.0.0",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/jest-dom"
+  },
+  "jest-styled-components": {
+    "current": "6.3.1",
+    "wanted": "6.3.1",
+    "latest": "7.2.0",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/jest-styled-components"
+  },
+  "lint-staged": {
+    "current": "8.1.5",
+    "wanted": "8.1.5",
+    "latest": "16.2.7",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/lint-staged"
+  },
+  "lodash": {
+    "current": "4.17.11",
+    "wanted": "4.17.11",
+    "latest": "4.17.21",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/lodash"
+  },
+  "minimist": {
+    "current": "1.2.0",
+    "wanted": "1.2.0",
+    "latest": "1.2.8",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/minimist"
+  },
+  "moment": {
+    "current": "2.29.0",
+    "wanted": "2.30.1",
+    "latest": "2.30.1",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/moment"
+  },
+  "ngrok": {
+    "current": "3.1.1",
+    "wanted": "3.1.1",
+    "latest": "5.0.0-beta.2",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/ngrok"
+  },
+  "node-plop": {
+    "current": "0.18.0",
+    "wanted": "0.18.0",
+    "latest": "0.32.3",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/node-plop"
+  },
+  "npm-watch": {
+    "current": "0.6.0",
+    "wanted": "0.6.0",
+    "latest": "0.13.0",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/npm-watch"
+  },
+  "null-loader": {
+    "current": "0.1.1",
+    "wanted": "0.1.1",
+    "latest": "4.0.1",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/null-loader"
+  },
+  "offline-plugin": {
+    "current": "5.0.6",
+    "wanted": "5.0.6",
+    "latest": "5.0.7",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/offline-plugin"
+  },
+  "plop": {
+    "current": "2.3.0",
+    "wanted": "2.3.0",
+    "latest": "4.0.4",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/plop"
+  },
+  "prettier": {
+    "current": "1.19.1",
+    "wanted": "1.19.1",
+    "latest": "3.7.4",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/prettier"
+  },
+  "prop-types": {
+    "current": "15.7.2",
+    "wanted": "15.7.2",
+    "latest": "15.8.1",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/prop-types"
+  },
+  "query-string": {
+    "current": "6.13.4",
+    "wanted": "6.14.1",
+    "latest": "9.3.1",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/query-string"
+  },
+  "react": {
+    "current": "16.13.1",
+    "wanted": "16.14.0",
+    "latest": "19.2.1",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/react"
+  },
+  "react-advanced-datetimerange-picker": {
+    "current": "1.0.12",
+    "wanted": "1.0.14",
+    "latest": "1.0.14",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/react-advanced-datetimerange-picker"
+  },
+  "react-alice-carousel": {
+    "current": "1.19.3",
+    "wanted": "1.19.3",
+    "latest": "2.9.1",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/react-alice-carousel"
+  },
+  "react-app-polyfill": {
+    "current": "0.2.2",
+    "wanted": "0.2.2",
+    "latest": "3.0.0",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/react-app-polyfill"
+  },
+  "react-bootstrap": {
+    "current": "1.3.0",
+    "wanted": "1.6.8",
+    "latest": "2.10.10",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/react-bootstrap"
+  },
+  "react-circular-progressbar": {
+    "current": "2.0.3",
+    "wanted": "2.0.3",
+    "latest": "2.2.0",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/react-circular-progressbar"
+  },
+  "react-collapsible": {
+    "current": "2.8.1",
+    "wanted": "2.10.0",
+    "latest": "2.10.0",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/react-collapsible"
+  },
+  "react-d3-cloud": {
+    "current": "0.7.0",
+    "wanted": "0.7.0",
+    "latest": "1.0.6",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/react-d3-cloud"
+  },
+  "react-dom": {
+    "current": "16.13.1",
+    "wanted": "16.14.0",
+    "latest": "19.2.1",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/react-dom"
+  },
+  "react-dropdown-select": {
+    "current": "4.5.2",
+    "wanted": "4.12.2",
+    "latest": "4.12.2",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/react-dropdown-select"
+  },
+  "react-facebook": {
+    "current": "8.1.4",
+    "wanted": "8.1.4",
+    "latest": "10.0.1",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/react-facebook"
+  },
+  "react-ga": {
+    "current": "2.7.0",
+    "wanted": "2.7.0",
+    "latest": "3.3.1",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/react-ga"
+  },
+  "react-google-charts": {
+    "current": "3.0.15",
+    "wanted": "3.0.15",
+    "latest": "5.2.1",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/react-google-charts"
+  },
+  "react-grid-system": {
+    "current": "6.4.2",
+    "wanted": "6.4.2",
+    "latest": "8.2.1",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/react-grid-system"
+  },
+  "react-helmet": {
+    "current": "6.0.0-beta",
+    "wanted": "6.0.0-beta",
+    "latest": "6.1.0",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/react-helmet"
+  },
+  "react-instagram-embed": {
+    "current": "1.5.0",
+    "wanted": "1.5.0",
+    "latest": "3.0.0",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/react-instagram-embed"
+  },
+  "react-intl": {
+    "current": "2.8.0",
+    "wanted": "2.8.0",
+    "latest": "7.1.14",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/react-intl"
+  },
+  "react-masonry-component": {
+    "current": "6.2.1",
+    "wanted": "6.3.0",
+    "latest": "6.3.0",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/react-masonry-component"
+  },
+  "react-multi-carousel": {
+    "current": "2.5.5",
+    "wanted": "2.8.6",
+    "latest": "2.8.6",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/react-multi-carousel"
+  },
+  "react-phone-number-input": {
+    "current": "2.5.3",
+    "wanted": "2.5.3",
+    "latest": "3.4.14",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/react-phone-number-input"
+  },
+  "react-pie3d": {
+    "current": "1.0.0",
+    "wanted": "1.1.0",
+    "latest": "1.1.0",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/react-pie3d"
+  },
+  "react-redux": {
+    "current": "7.0.2",
+    "wanted": "7.0.2",
+    "latest": "9.2.0",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/react-redux"
+  },
+  "react-remove-scroll": {
+    "current": "2.4.0",
+    "wanted": "2.7.2",
+    "latest": "2.7.2",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/react-remove-scroll"
+  },
+  "react-responsive-carousel": {
+    "current": "3.2.10",
+    "wanted": "3.2.23",
+    "latest": "3.2.23",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/react-responsive-carousel"
+  },
+  "react-router-dom": {
+    "current": "5.0.0",
+    "wanted": "5.0.0",
+    "latest": "7.10.0",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/react-router-dom"
+  },
+  "react-scroll-wheel-handler": {
+    "current": "1.1.5",
+    "wanted": "1.1.5",
+    "latest": "2.2.0",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/react-scroll-wheel-handler"
+  },
+  "react-slick": {
+    "current": "0.23.2",
+    "wanted": "0.23.2",
+    "latest": "0.31.0",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/react-slick"
+  },
+  "react-spring": {
+    "current": "8.0.27",
+    "wanted": "8.0.27",
+    "latest": "10.0.3",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/react-spring"
+  },
+  "react-swipeable-views": {
+    "current": "0.13.9",
+    "wanted": "0.13.9",
+    "latest": "0.14.1",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/react-swipeable-views"
+  },
+  "react-swipeable-views-core": {
+    "current": "0.13.7",
+    "wanted": "0.13.7",
+    "latest": "0.14.1",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/react-swipeable-views-core"
+  },
+  "react-swipeable-views-utils": {
+    "current": "0.13.9",
+    "wanted": "0.13.9",
+    "latest": "0.14.1",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/react-swipeable-views-utils"
+  },
+  "react-test-renderer": {
+    "current": "16.8.6",
+    "wanted": "16.8.6",
+    "latest": "19.2.1",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/react-test-renderer"
+  },
+  "react-testing-library": {
+    "current": "6.1.2",
+    "wanted": "6.1.2",
+    "latest": "8.0.1",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/react-testing-library"
+  },
+  "react-text-transition": {
+    "current": "1.1.2",
+    "wanted": "1.3.0",
+    "latest": "3.1.0",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/react-text-transition"
+  },
+  "react-toastify": {
+    "current": "5.5.0",
+    "wanted": "5.5.0",
+    "latest": "11.0.5",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/react-toastify"
+  },
+  "react-tooltip": {
+    "current": "4.2.3",
+    "wanted": "4.2.3",
+    "latest": "5.30.0",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/react-tooltip"
+  },
+  "react-twitter-embed": {
+    "current": "3.0.3",
+    "wanted": "3.0.3",
+    "latest": "4.0.4",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/react-twitter-embed"
+  },
+  "react-ui-cards": {
+    "current": "2.0.0",
+    "wanted": "2.0.0",
+    "latest": "3.1.0",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/react-ui-cards"
+  },
+  "react-waypoint": {
+    "current": "9.0.2",
+    "wanted": "9.0.2",
+    "latest": "10.3.0",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/react-waypoint"
+  },
+  "react-with-direction": {
+    "current": "1.3.1",
+    "wanted": "1.4.0",
+    "latest": "1.4.0",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/react-with-direction"
+  },
+  "reactjs-popup": {
+    "current": "1.5.0",
+    "wanted": "1.5.0",
+    "latest": "2.0.6",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/reactjs-popup"
+  },
+  "recharts": {
+    "current": "2.0.0-beta.7",
+    "wanted": "2.15.4",
+    "latest": "3.5.1",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/recharts"
+  },
+  "redux": {
+    "current": "4.0.1",
+    "wanted": "4.0.1",
+    "latest": "5.0.1",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/redux"
+  },
+  "redux-saga": {
+    "current": "1.0.2",
+    "wanted": "1.0.2",
+    "latest": "1.4.2",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/redux-saga"
+  },
+  "reselect": {
+    "current": "4.0.0",
+    "wanted": "4.0.0",
+    "latest": "5.1.1",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/reselect"
+  },
+  "rimraf": {
+    "current": "2.6.3",
+    "wanted": "2.6.3",
+    "latest": "6.1.2",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/rimraf"
+  },
+  "sanitize.css": {
+    "current": "4.1.0",
+    "wanted": "4.1.0",
+    "latest": "13.0.0",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/sanitize.css"
+  },
+  "sass": {
+    "current": "1.26.10",
+    "wanted": "1.94.2",
+    "latest": "1.94.2",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/sass"
+  },
+  "sass-loader": {
+    "current": "7.3.1",
+    "wanted": "7.3.1",
+    "latest": "16.0.6",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/sass-loader"
+  },
+  "shelljs": {
+    "current": "0.8.4",
+    "wanted": "0.8.5",
+    "latest": "0.10.0",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/shelljs"
+  },
+  "socket.io-client": {
+    "current": "2.3.1",
+    "wanted": "2.5.0",
+    "latest": "4.8.1",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/socket.io-client"
+  },
+  "style-loader": {
+    "current": "0.23.1",
+    "wanted": "0.23.1",
+    "latest": "4.0.0",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/style-loader"
+  },
+  "styled-components": {
+    "current": "4.2.0",
+    "wanted": "4.2.0",
+    "latest": "6.1.19",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/styled-components"
+  },
+  "stylelint": {
+    "current": "10.0.1",
+    "wanted": "10.0.1",
+    "latest": "16.26.1",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/stylelint"
+  },
+  "stylelint-config-recommended": {
+    "current": "2.2.0",
+    "wanted": "2.2.0",
+    "latest": "17.0.0",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/stylelint-config-recommended"
+  },
+  "stylelint-processor-styled-components": {
+    "current": "1.6.0",
+    "wanted": "1.6.0",
+    "latest": "1.10.0",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/stylelint-processor-styled-components"
+  },
+  "svg-url-loader": {
+    "current": "2.3.2",
+    "wanted": "2.3.2",
+    "latest": "8.0.0",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/svg-url-loader"
+  },
+  "terser-webpack-plugin": {
+    "current": "1.2.3",
+    "wanted": "1.2.3",
+    "latest": "5.3.14",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/terser-webpack-plugin"
+  },
+  "url-loader": {
+    "current": "1.1.2",
+    "wanted": "1.1.2",
+    "latest": "4.1.1",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/url-loader"
+  },
+  "validator": {
+    "current": "11.1.0",
+    "wanted": "11.1.0",
+    "latest": "13.15.23",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/validator"
+  },
+  "webpack": {
+    "current": "4.30.0",
+    "wanted": "4.30.0",
+    "latest": "5.103.0",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/webpack"
+  },
+  "webpack-cli": {
+    "current": "3.3.0",
+    "wanted": "3.3.0",
+    "latest": "6.0.1",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/webpack-cli"
+  },
+  "webpack-dev-middleware": {
+    "current": "3.6.2",
+    "wanted": "3.6.2",
+    "latest": "7.4.5",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/webpack-dev-middleware"
+  },
+  "webpack-dev-server": {
+    "current": "1.16.5",
+    "wanted": "1.16.5",
+    "latest": "5.2.2",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/webpack-dev-server"
+  },
+  "webpack-hot-middleware": {
+    "current": "2.24.3",
+    "wanted": "2.24.3",
+    "latest": "2.26.1",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/webpack-hot-middleware"
+  },
+  "webpack-pwa-manifest": {
+    "current": "4.0.0",
+    "wanted": "4.0.0",
+    "latest": "4.3.0",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/webpack-pwa-manifest"
+  },
+  "whatwg-fetch": {
+    "current": "3.0.0",
+    "wanted": "3.0.0",
+    "latest": "3.6.20",
+    "dependent": "Maplytiks-angular",
+    "location": "/Volumes/Batman/Projects/Maplytiks-angular/node_modules/whatwg-fetch"
+  }
+}

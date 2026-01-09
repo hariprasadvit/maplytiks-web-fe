@@ -1,0 +1,633 @@
+/**
+ * Overview Page - AI-Themed Dark Mode
+ * Glassmorphic cards with neural patterns
+ */
+
+.overview {
+  &-wrapper {
+    display: flex;
+    padding: 50px 0;
+    @media screen and (max-width: $sm-screen) {
+      padding: 25px 0;
+      flex-wrap: wrap;
+    }
+    &.sticky {
+      padding: 180px 0 50px;
+      .overview {
+        &-sidebar {
+          position: fixed;
+          top: 170px;
+          left: 0px;
+          width: 10%;
+        }
+        &-main {
+          margin-left: calc(10% + 20px);
+          position: relative;
+        }
+      }
+    }
+  }
+
+  // Sidebar navigation
+  &-sidebar {
+    width: 12%;
+    margin-left: 10px;
+    @media screen and (max-width: $sm-screen) {
+      width: auto;
+      flex: 1 0 100%;
+      border-bottom: 1px solid $border-default;
+      padding-bottom: 20px;
+      margin-bottom: 15px;
+      overflow: hidden;
+    }
+    ul {
+      @media screen and (max-width: $sm-screen) {
+        display: flex;
+        overflow: hidden;
+        overflow-x: auto;
+        padding-bottom: 20px;
+        @include glass-scrollbar;
+      }
+    }
+    li {
+      margin-bottom: 25px;
+      font-family: $font-primary;
+      font-weight: 500;
+      font-size: 14px;
+      color: $text-secondary;
+      opacity: 0.8;
+      position: relative;
+      text-align: left;
+      cursor: pointer;
+      transition: all $transition-base $ease-out;
+
+      @media screen and (max-width: $sm-screen) {
+        font-size: 12px;
+        line-height: 15px;
+        opacity: 1;
+        margin: 0 25px 0 0;
+      }
+
+      &:hover {
+        color: $text-primary;
+        opacity: 1;
+      }
+
+      &.active {
+        font-weight: 700;
+        color: $text-white;
+        opacity: 1;
+
+        @media screen and (max-width: $sm-screen) {
+          font-size: 14px;
+          line-height: 18px;
+        }
+
+        // Connection line
+        &::before {
+          content: '';
+          height: 2px;
+          width: 100%;
+          position: absolute;
+          left: calc(-72% - 77px);
+          background: linear-gradient(90deg, transparent 0%, $accent-primary 100%);
+          top: 50%;
+          box-shadow: 0 0 10px rgba(255, 107, 53, 0.5);
+
+          @media screen and (max-width: $sm-screen) {
+            display: none;
+          }
+        }
+
+        // Active dot indicator
+        &::after {
+          content: '\25cf';
+          position: absolute;
+          left: -35px;
+          font-size: 18px;
+          color: $accent-primary;
+          top: 3px;
+          height: 20px;
+          width: 20px;
+          border: 2px solid $accent-primary;
+          border-radius: 50%;
+          line-height: 15.5px;
+          text-indent: 3.5px;
+          box-shadow: 0 0 15px rgba(255, 107, 53, 0.6), inset 0 0 10px rgba(255, 107, 53, 0.3);
+          animation: glow-pulse 2s ease-in-out infinite;
+
+          @media screen and (max-width: $sm-screen) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  // Main content area
+  &-main {
+    width: 88%;
+    min-height: calc(100vh * 80 / 100);
+    @media screen and (max-width: $sm-screen) {
+      width: auto;
+      flex: 1 0 100%;
+    }
+
+    .global {
+      &-filter {
+        &-right {
+          &-header {
+            margin: 0 15px 30px;
+            @include glass-card(0.5, 8px);
+            padding: 20px;
+            border-radius: 10px;
+
+            @media screen and (max-width: $sm-screen) {
+              margin: 0 0 30px;
+              flex-wrap: wrap;
+            }
+          }
+          &-result {
+            color: $text-primary;
+            font-family: $font-primary;
+            font-size: 16px;
+            font-weight: 600;
+
+            @media screen and (max-width: $sm-screen) {
+              flex: 0 0 100%;
+              margin-bottom: 15px;
+            }
+          }
+          &-search {
+            @media screen and (max-width: $sm-screen) {
+              flex: 0 0 100%;
+            }
+
+            .my-projects-search {
+              input {
+                @include glass-input;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // Matches view
+    #overview {
+      &-matches {
+        .overview {
+          &-card {
+            width: 25%;
+            margin: 0 0 30px;
+            padding: 0 15px;
+
+            @media (max-width: 1024px) {
+              width: 48%;
+            }
+            @media screen and (max-width: $sm-screen) {
+              flex: 1 0 100%;
+              margin: 0 0 15px;
+            }
+
+            // Arrow indicator for active card
+            &.show {
+              .overview {
+                &-card {
+                  &-top {
+                    &::after {
+                      content: '';
+                      position: absolute;
+                      bottom: -30px;
+                      left: 35px;
+                      height: 10px;
+                      width: 10px;
+                      border-left: 10px solid transparent;
+                      border-right: 10px solid transparent;
+                      border-bottom: 10px solid $dark-bg-card;
+                    }
+                  }
+                }
+              }
+            }
+
+            &-top {
+              &-details {
+                height: 125px;
+              }
+            }
+
+            &-bottom {
+              position: relative;
+              z-index: 2;
+              height: 90px;
+              font-family: $font-primary;
+              font-size: 12px;
+              font-weight: 500;
+              color: $text-secondary;
+              letter-spacing: 0.4px;
+              line-height: 15px;
+              text-align: center;
+
+              &-flag {
+                height: 40px;
+                width: 65px;
+                img {
+                  height: 100%;
+                  width: 100%;
+                  object-fit: cover;
+                  border-radius: 5px;
+                }
+              }
+
+              &-team {
+                h6 {
+                  margin-top: 9px;
+                  color: $text-primary;
+                  font-family: $font-primary;
+                }
+              }
+
+              &-vs {
+                font-size: 16px;
+                letter-spacing: 0.8px;
+                line-height: 17px;
+                margin: 0px 6px;
+                color: $text-muted;
+              }
+            }
+          }
+          &-tray {
+            margin: 30px 0;
+          }
+        }
+      }
+
+      // Sponsors view
+      &-sponsors {
+        .overview {
+          &-card {
+            width: calc(100% / 7);
+            margin: 0 0 20px;
+            padding: 0 15px;
+
+            @media screen and (max-width: $sm-screen) {
+              margin: 0 0 15px;
+              flex: 0 0 33%;
+            }
+
+            // Tray positioning for different columns
+            @for $i from 2 through 7 {
+              &:nth-child(#{$i}n) {
+                .overview {
+                  &-tray {
+                    margin-left: calc(((-1280px * 88 / 100) / 7) * ($i - 1));
+                  }
+                }
+              }
+            }
+
+            &.show {
+              .overview {
+                &-card {
+                  &-bottom {
+                    position: relative;
+                    &::after {
+                      content: '';
+                      position: absolute;
+                      bottom: 0px;
+                      left: 0;
+                      right: 0;
+                      margin: 0 auto;
+                      height: 10px;
+                      width: 10px;
+                      border-left: 10px solid transparent;
+                      border-right: 10px solid transparent;
+                      border-bottom: 10px solid $dark-bg-card;
+                    }
+                  }
+                }
+              }
+            }
+
+            &-top {
+              display: flex;
+              justify-content: center;
+              &-image {
+                position: relative;
+                height: 62px;
+                width: 62px;
+              }
+              &-overlay {
+                display: none;
+              }
+            }
+
+            &-bottom {
+              flex-direction: column;
+              align-items: center;
+              padding: 10px 0;
+              text-align: center;
+              height: 80px;
+
+              &-title,
+              &-subtitle {
+                font-family: $font-primary;
+                font-weight: 500;
+                font-size: 12px;
+              }
+
+              &-title {
+                color: $text-secondary;
+              }
+
+              &-subtitle {
+                margin-top: 5px;
+                color: $accent-primary;
+                font-weight: 600;
+              }
+            }
+          }
+        }
+      }
+
+      // Episodes view
+      &-episodes {
+        .overview {
+          &-card {
+            width: calc(100% / 3);
+            margin: 0 0 30px;
+            padding: 0 15px;
+
+            @media screen and (max-width: $sm-screen) {
+              flex: 1 0 100%;
+              margin: 30px 0px;
+            }
+
+            &-top {
+              &-details {
+                min-height: 150px;
+                @media screen and (max-width: $sm-screen) {
+                  margin-bottom: 5px;
+                }
+              }
+              &-title {
+                margin-bottom: 10px;
+              }
+              &-image {
+                img {
+                  border-radius: 5px;
+                }
+              }
+            }
+
+            &-bottom {
+              position: relative;
+              z-index: 2;
+              &-text {
+                color: $text-white;
+                font-weight: 500;
+                font-size: 12px;
+                font-family: $font-primary;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Overview rows
+  &-row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  // Overview cards - Glassmorphic design
+  &-card {
+    margin: 0 15px 30px;
+    cursor: pointer;
+    transition: all $transition-base $ease-out;
+    @include hover-lift(-4px, 1.02);
+
+    &:hover {
+      .overview-card-top-overlay {
+        background: rgba(0, 0, 0, 0.7);
+      }
+    }
+
+    &-top {
+      position: relative;
+      @include glass-card(0.3, 8px);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow:
+        0 8px 24px rgba(0, 0, 0, 0.4),
+        0 0 15px rgba(255, 107, 53, 0.1);
+
+      &:hover {
+        box-shadow:
+          0 12px 36px rgba(0, 0, 0, 0.6),
+          0 0 25px rgba(255, 107, 53, 0.2);
+      }
+
+      &-details {
+        position: relative;
+        z-index: 2;
+        color: $text-white;
+        padding: 20px;
+        margin-bottom: 14px;
+        min-height: 125px;
+
+        @media screen and (max-width: 1264px) and (min-width: 1024px) {
+          padding: 15px;
+          height: 90px !important;
+          min-height: 90px;
+        }
+      }
+
+      &-date {
+        font-family: $font-primary;
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 0.4px;
+        line-height: 15px;
+        color: $text-secondary;
+
+        @media screen and (max-width: 1264px) and (min-width: 1024px) {
+          font-size: 12px;
+        }
+      }
+
+      &-title {
+        font-family: $font-primary;
+        font-size: 22px;
+        font-weight: 600;
+        color: $text-white;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+
+        @media screen and (max-width: 1264px) and (min-width: 1024px) {
+          font-size: 18px;
+        }
+      }
+
+      &-subtitle {
+        margin: 7px 0 12px;
+        color: $text-secondary;
+        font-family: $font-primary;
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 0.4px;
+        line-height: 15px;
+
+        @media screen and (max-width: 1264px) and (min-width: 1024px) {
+          font-size: 10px;
+        }
+      }
+
+      &-image {
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        height: 100%;
+        width: 100%;
+        border-radius: 5px;
+        overflow: hidden;
+
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+
+      &-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(
+          180deg,
+          rgba(10, 14, 39, 0.6) 0%,
+          rgba(10, 14, 39, 0.85) 100%
+        );
+        z-index: 1;
+        transition: background $transition-base $ease-out;
+      }
+    }
+
+    &-bottom {
+      display: flex;
+      padding: 5px 20px 20px;
+      align-items: flex-end;
+    }
+  }
+
+  // Expanded tray view
+  &-tray {
+    @include glass-card(0.7, 12px);
+    margin-top: 25px;
+    padding: 20px 30px;
+    width: calc((1280px - 30px) * 88 / 100);
+    margin: 0 0 30px;
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow:
+      0 8px 30px rgba(0, 0, 0, 0.5),
+      0 0 20px rgba(255, 107, 53, 0.1);
+    border-radius: 12px;
+    border: 1px solid $border-default;
+
+    @media screen and (max-width: $sm-screen) {
+      margin: 0 0 30px;
+    }
+
+    &-item {
+      display: flex;
+      margin: 15px 0;
+      flex: 0 0 16.6%;
+
+      @media screen and (max-width: $sm-screen) {
+        flex: 1 0 50%;
+      }
+
+      &-img {
+        height: 32px;
+        width: 32px;
+        margin-right: 15px;
+        border-radius: 50%;
+        border: 2px solid $border-default;
+        overflow: hidden;
+        background: $dark-bg-elevated;
+
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+
+      &-title {
+        font-size: 12px;
+        font-weight: 500;
+        color: $text-primary;
+        font-family: $font-primary;
+        width: calc(100% - 32px - 15px);
+        padding-right: 10px;
+      }
+    }
+  }
+}
+
+// Card hover effect for all overview cards
+.overview-card-top-hover {
+  &:hover {
+    box-shadow:
+      0 12px 40px rgba(0, 0, 0, 0.6),
+      0 0 30px rgba(255, 107, 53, 0.25);
+    transform: translateY(-4px);
+  }
+}
+
+// Sponsor image scaling effect
+.overview-card-sponsor-image {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  &:hover {
+    -webkit-transform: scale(1.15);
+    transform: scale(1.15);
+    filter: brightness(1.1);
+  }
+}
+
+// Episode-specific styles
+.overview-main #overview-episodes .overview-card-top-title {
+  @media (max-width: 1024px) {
+    font-size: 18px;
+  }
+}
+
+#overview-episodes .overview-card-top-image {
+  @media (max-width: 767px) {
+    width: 40%;
+  }
+  @media (max-width: 474px) {
+    width: 90%;
+  }
+}
+
+#overview-episodes .overview-card-top-image img {
+  @media (max-width: 474px) {
+    object-fit: fill;
+  }
+}
+
+.overview-main #overview-episodes .overview-card-top-title {
+  @media (max-width: 767px) {
+    width: 40%;
+    font-size: 15px;
+  }
+}

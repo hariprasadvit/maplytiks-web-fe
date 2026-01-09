@@ -1,0 +1,462 @@
+/**
+ * Glassmorphism Effects
+ * Frosted glass UI components with backdrop blur
+ */
+
+@import 'darkTheme';
+
+// ====================================
+// Base Glass Card
+// ====================================
+
+@mixin glass-card($opacity: 0.7, $blur: $glass-blur) {
+  background: rgba(26, 26, 26, $opacity);
+  backdrop-filter: blur($blur);
+  -webkit-backdrop-filter: blur($blur); // Safari support
+  border: 1px solid $glass-border;
+  box-shadow:
+    $shadow-default,
+    $glow-inset;
+
+  // Fallback for browsers that don't support backdrop-filter
+  @supports not (backdrop-filter: blur($blur)) {
+    background: rgba(26, 26, 26, 0.95);
+  }
+}
+
+// ====================================
+// Glass Card Hover State
+// ====================================
+
+@mixin glass-hover {
+  border-color: $glass-border-hover;
+  box-shadow:
+    $shadow-elevated,
+    $glow-primary,
+    $glow-inset-strong;
+  transform: translateY(-2px);
+  transition: all $transition-base $ease-out;
+}
+
+// ====================================
+// Glass Card Active State
+// ====================================
+
+@mixin glass-active {
+  border-color: $border-active;
+  box-shadow:
+    $shadow-default,
+    $glow-active,
+    $glow-inset-strong;
+  transform: translateY(0);
+}
+
+// ====================================
+// Light Glass (More Transparent)
+// ====================================
+
+@mixin glass-light($blur: $glass-blur-light) {
+  @include glass-card(0.5, $blur);
+}
+
+// ====================================
+// Heavy Glass (Less Transparent)
+// ====================================
+
+@mixin glass-heavy($blur: $glass-blur-heavy) {
+  @include glass-card(0.9, $blur);
+}
+
+// ====================================
+// Glass Modal/Overlay
+// ====================================
+
+@mixin glass-modal {
+  background: rgba(10, 14, 39, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid $glass-border;
+  box-shadow:
+    0 20px 60px 0 rgba(0, 0, 0, 0.6),
+    $glow-primary,
+    $glow-inset;
+
+  @supports not (backdrop-filter: blur(20px)) {
+    background: rgba(10, 14, 39, 0.98);
+  }
+}
+
+// ====================================
+// Glass Input Field
+// ====================================
+
+@mixin glass-input {
+  background: rgba(26, 26, 26, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid $border-subtle;
+  color: $text-primary;
+
+  &:hover {
+    border-color: $border-default;
+    background: rgba(26, 26, 26, 0.7);
+  }
+
+  &:focus {
+    border-color: $accent-primary;
+    box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
+    background: rgba(26, 26, 26, 0.8);
+    outline: none;
+  }
+
+  &::placeholder {
+    color: $text-muted;
+  }
+
+  @supports not (backdrop-filter: blur(8px)) {
+    background: rgba(26, 26, 26, 0.9);
+  }
+}
+
+// ====================================
+// Glass Button
+// ====================================
+
+@mixin glass-button($primary: false) {
+  @if $primary {
+    background: linear-gradient(135deg, rgba(255, 107, 53, 0.8), rgba(0, 255, 242, 0.8));
+    border: 1px solid $accent-primary;
+    color: $text-white;
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+
+    &:hover {
+      background: linear-gradient(135deg, rgba(255, 107, 53, 0.9), rgba(0, 255, 242, 0.9));
+      box-shadow: 0 6px 20px rgba(255, 107, 53, 0.6);
+      transform: translateY(-1px);
+    }
+
+    &:active {
+      transform: translateY(0);
+      box-shadow: 0 2px 10px rgba(255, 107, 53, 0.4);
+    }
+  } @else {
+    @include glass-card(0.6, 8px);
+    color: $text-primary;
+
+    &:hover {
+      @include glass-hover;
+    }
+
+    &:active {
+      @include glass-active;
+    }
+  }
+
+  transition: all $transition-base $ease-out;
+}
+
+// ====================================
+// Glass Dropdown
+// ====================================
+
+@mixin glass-dropdown {
+  @include glass-card(0.85, 12px);
+  border: 1px solid $glass-border;
+  box-shadow:
+    0 10px 40px 0 rgba(0, 0, 0, 0.5),
+    $glow-primary;
+
+  .dropdown-item {
+    color: $text-primary;
+    transition: all $transition-fast $ease-out;
+
+    &:hover {
+      background: rgba(255, 107, 53, 0.15);
+      color: $text-white;
+    }
+
+    &:active,
+    &.active {
+      background: rgba(255, 107, 53, 0.25);
+      color: $text-white;
+    }
+  }
+}
+
+// ====================================
+// Glass Tooltip
+// ====================================
+
+@mixin glass-tooltip {
+  @include glass-card(0.95, 10px);
+  font-size: 12px;
+  padding: 8px 12px;
+  border-radius: $radius-md;
+  box-shadow:
+    $shadow-subtle,
+    0 0 10px rgba(255, 107, 53, 0.2);
+  color: $text-primary;
+  max-width: 250px;
+}
+
+// ====================================
+// Glass Table Row
+// ====================================
+
+@mixin glass-table-row {
+  background: rgba(26, 26, 26, 0.4);
+  border-bottom: 1px solid $border-subtle;
+  transition: all $transition-fast $ease-out;
+
+  &:hover {
+    background: rgba(26, 26, 26, 0.6);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+}
+
+// ====================================
+// Glass Navigation Tab
+// ====================================
+
+@mixin glass-tab($active: false) {
+  @if $active {
+    background: rgba(255, 107, 53, 0.15);
+    border-bottom: 2px solid $accent-primary;
+    color: $text-white;
+    box-shadow: 0 0 15px rgba(255, 107, 53, 0.3);
+  } @else {
+    background: transparent;
+    border-bottom: 2px solid transparent;
+    color: $text-secondary;
+
+    &:hover {
+      background: rgba(255, 107, 53, 0.08);
+      color: $text-primary;
+    }
+  }
+
+  transition: all $transition-base $ease-out;
+}
+
+// ====================================
+// Glass Badge/Pill
+// ====================================
+
+@mixin glass-badge($color: $accent-primary) {
+  background: rgba($color, 0.15);
+  border: 1px solid rgba($color, 0.3);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  color: $color;
+  padding: 4px 12px;
+  border-radius: $radius-full;
+  font-size: 12px;
+  font-weight: $weight-medium;
+  box-shadow: 0 2px 8px rgba($color, 0.2);
+}
+
+// ====================================
+// Glass Progress Bar
+// ====================================
+
+@mixin glass-progress-bar {
+  background: rgba(26, 26, 26, 0.4);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid $border-subtle;
+  border-radius: $radius-full;
+  overflow: hidden;
+
+  .progress-fill {
+    background: $gradient-primary;
+    box-shadow: 0 0 10px rgba(255, 107, 53, 0.5);
+    transition: width $transition-base $ease-out;
+  }
+}
+
+// ====================================
+// Glass Sidebar
+// ====================================
+
+@mixin glass-sidebar {
+  @include glass-card(0.8, 16px);
+  border-right: 1px solid $glass-border;
+  box-shadow:
+    2px 0 15px rgba(0, 0, 0, 0.3),
+    inset -1px 0 0 rgba(255, 107, 53, 0.1);
+}
+
+// ====================================
+// Glass Header
+// ====================================
+
+@mixin glass-header($sticky: false) {
+  @include glass-card(0.85, 12px);
+
+  @if $sticky {
+    position: sticky;
+    top: 0;
+    z-index: $z-sticky;
+  }
+
+  border-bottom: 1px solid $glass-border;
+  box-shadow:
+    0 4px 20px rgba(0, 0, 0, 0.3),
+    0 0 30px rgba(255, 107, 53, 0.1);
+}
+
+// ====================================
+// Glass Footer
+// ====================================
+
+@mixin glass-footer {
+  @include glass-card(0.9, 12px);
+  border-top: 1px solid $glass-border;
+  box-shadow:
+    0 -4px 20px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 107, 53, 0.1);
+}
+
+// ====================================
+// Glass Scrollbar
+// ====================================
+
+@mixin glass-scrollbar {
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: rgba(26, 26, 26, 0.3);
+    border-radius: $radius-full;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba(255, 107, 53, 0.3);
+    border-radius: $radius-full;
+    backdrop-filter: blur(4px);
+
+    &:hover {
+      background: rgba(255, 107, 53, 0.5);
+    }
+
+    &:active {
+      background: rgba(255, 107, 53, 0.7);
+    }
+  }
+
+  // Firefox
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 107, 53, 0.3) rgba(26, 26, 26, 0.3);
+}
+
+// ====================================
+// Animated Glass Shimmer
+// ====================================
+
+@mixin glass-shimmer {
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(255, 107, 53, 0.1) 50%,
+      transparent 100%
+    );
+    animation: shimmer 3s infinite;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 200%;
+  }
+}
+
+// ====================================
+// Glass with Gradient Border
+// ====================================
+
+@mixin glass-gradient-border($borderWidth: 2px) {
+  position: relative;
+  background: rgba(26, 26, 26, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: $borderWidth;
+    background: $gradient-accent;
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+}
+
+// ====================================
+// Utility Classes
+// ====================================
+
+// Apply these classes directly if needed
+.glass-card {
+  @include glass-card;
+}
+
+.glass-card-light {
+  @include glass-light;
+}
+
+.glass-card-heavy {
+  @include glass-heavy;
+}
+
+.glass-modal {
+  @include glass-modal;
+}
+
+.glass-input {
+  @include glass-input;
+}
+
+.glass-scrollbar {
+  @include glass-scrollbar;
+}
+
+// ====================================
+// Responsive Adjustments
+// ====================================
+
+@media (max-width: 767px) {
+  // Reduce blur on mobile for better performance
+  .glass-card,
+  [class*="glass-"] {
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+}
+
+// Reduced motion support
+@media (prefers-reduced-motion: reduce) {
+  .glass-shimmer::after {
+    animation: none;
+  }
+}

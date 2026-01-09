@@ -1,0 +1,467 @@
+/**
+ * Neural Network Patterns
+ * Subtle dot matrix and grid patterns for AI-tech aesthetic
+ */
+
+@import 'darkTheme';
+
+// ====================================
+// Dot Matrix Pattern
+// ====================================
+
+@mixin dot-pattern($color: $pattern-dot-color, $size: $pattern-dot-size) {
+  background-image: radial-gradient(circle, $color 1px, transparent 1px);
+  background-size: $size $size;
+}
+
+// ====================================
+// Grid Line Pattern
+// ====================================
+
+@mixin grid-pattern($color: $pattern-grid-color, $size: $pattern-grid-size) {
+  background-image:
+    linear-gradient($color 1px, transparent 1px),
+    linear-gradient(90deg, $color 1px, transparent 1px);
+  background-size: $size $size;
+}
+
+// ====================================
+// Combined Neural Background
+// ====================================
+
+@mixin neural-background($dot-opacity: $pattern-opacity-default, $grid-opacity: $pattern-opacity-default) {
+  position: relative;
+  background-color: $dark-bg-primary;
+
+  // Dot matrix layer
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    @include dot-pattern;
+    opacity: $dot-opacity;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  // Grid lines layer
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    @include grid-pattern;
+    opacity: $grid-opacity;
+    pointer-events: none;
+    z-index: 0;
+  }
+}
+
+// ====================================
+// Subtle Pattern (Lower Opacity)
+// ====================================
+
+@mixin neural-background-subtle {
+  @include neural-background($pattern-opacity-subtle, $pattern-opacity-subtle);
+}
+
+// ====================================
+// Pattern for Card Backgrounds
+// ====================================
+
+@mixin card-pattern($opacity: 0.15) {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    @include dot-pattern(rgba(255, 107, 53, 0.05), 20px);
+    opacity: $opacity;
+    pointer-events: none;
+    z-index: 0;
+  }
+}
+
+// ====================================
+// Animated Pattern (Optional)
+// ====================================
+
+@mixin animated-pattern {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    @include dot-pattern;
+    opacity: $pattern-opacity-default;
+    pointer-events: none;
+    animation: pattern-drift 60s linear infinite;
+    z-index: 0;
+  }
+}
+
+@keyframes pattern-drift {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: $pattern-dot-size $pattern-dot-size;
+  }
+}
+
+// ====================================
+// Tech Grid with Glow
+// ====================================
+
+@mixin tech-grid($color: $accent-primary, $opacity: 0.05) {
+  background-image:
+    linear-gradient(rgba($color, $opacity) 1px, transparent 1px),
+    linear-gradient(90deg, rgba($color, $opacity) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+// ====================================
+// Diagonal Grid Pattern
+// ====================================
+
+@mixin diagonal-grid($color: $pattern-grid-color, $size: 40px) {
+  background-image:
+    linear-gradient(45deg, $color 1px, transparent 1px),
+    linear-gradient(-45deg, $color 1px, transparent 1px);
+  background-size: $size $size;
+}
+
+// ====================================
+// Hexagon Pattern (Advanced)
+// ====================================
+
+@mixin hexagon-pattern($color: rgba(255, 107, 53, 0.05), $size: 60px) {
+  background-image:
+    linear-gradient(30deg, $color 12%, transparent 12.5%, transparent 87%, $color 87.5%, $color),
+    linear-gradient(150deg, $color 12%, transparent 12.5%, transparent 87%, $color 87.5%, $color),
+    linear-gradient(30deg, $color 12%, transparent 12.5%, transparent 87%, $color 87.5%, $color),
+    linear-gradient(150deg, $color 12%, transparent 12.5%, transparent 87%, $color 87.5%, $color),
+    linear-gradient(60deg, rgba($color, 0.5) 25%, transparent 25.5%, transparent 75%, rgba($color, 0.5) 75%, rgba($color, 0.5)),
+    linear-gradient(60deg, rgba($color, 0.5) 25%, transparent 25.5%, transparent 75%, rgba($color, 0.5) 75%, rgba($color, 0.5));
+  background-size: $size ($size * 1.73);
+  background-position: 0 0, 0 0, ($size / 2) ($size * 0.866), ($size / 2) ($size * 0.866), 0 0, ($size / 2) ($size * 0.866);
+}
+
+// ====================================
+// Circuit Board Pattern
+// ====================================
+
+@mixin circuit-pattern {
+  background-image:
+    radial-gradient(circle at 20% 50%, rgba(255, 107, 53, 0.1) 0%, transparent 10%),
+    radial-gradient(circle at 60% 15%, rgba(255, 179, 71, 0.08) 0%, transparent 8%),
+    radial-gradient(circle at 70% 80%, rgba(255, 140, 90, 0.1) 0%, transparent 12%),
+    linear-gradient(rgba(255, 107, 53, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 107, 53, 0.03) 1px, transparent 1px);
+  background-size:
+    100% 100%,
+    100% 100%,
+    100% 100%,
+    50px 50px,
+    50px 50px;
+}
+
+// ====================================
+// Particle Field
+// ====================================
+
+@mixin particle-field {
+  background-image:
+    radial-gradient(circle, rgba(255, 107, 53, 0.4) 1px, transparent 1px),
+    radial-gradient(circle, rgba(255, 179, 71, 0.3) 1px, transparent 1px),
+    radial-gradient(circle, rgba(255, 140, 90, 0.3) 1px, transparent 1px);
+  background-size:
+    80px 80px,
+    120px 120px,
+    100px 100px;
+  background-position:
+    0 0,
+    40px 60px,
+    80px 20px;
+}
+
+// ====================================
+// Scanline Effect
+// ====================================
+
+@mixin scanlines($opacity: 0.05, $size: 2px) {
+  background-image: linear-gradient(
+    transparent 50%,
+    rgba(255, 107, 53, $opacity) 50%
+  );
+  background-size: 100% $size;
+  animation: scanline-move 10s linear infinite;
+}
+
+@keyframes scanline-move {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 100%;
+  }
+}
+
+// ====================================
+// Data Stream Effect
+// ====================================
+
+@mixin data-stream {
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: linear-gradient(
+      180deg,
+      transparent 0%,
+      rgba(255, 107, 53, 0.1) 50%,
+      transparent 100%
+    );
+    animation: data-stream-flow 3s ease-in-out infinite;
+    pointer-events: none;
+  }
+}
+
+@keyframes data-stream-flow {
+  0% {
+    top: -100%;
+  }
+  50% {
+    top: 100%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
+// ====================================
+// Mobile Optimized Patterns
+// ====================================
+
+@mixin neural-background-mobile {
+  @include neural-background($pattern-opacity-mobile, $pattern-opacity-mobile);
+}
+
+// Media query for automatic mobile pattern reduction
+@media (max-width: 767px) {
+  .neural-pattern,
+  [class*="neural-bg"] {
+    &::before,
+    &::after {
+      opacity: $pattern-opacity-mobile !important;
+    }
+  }
+}
+
+// ====================================
+// Animated Gradient Orbs (Premium AI Effect)
+// ====================================
+
+@mixin gradient-orbs {
+  position: relative;
+  overflow: hidden;
+
+  // Blue gradient orb
+  &::before {
+    content: '';
+    position: absolute;
+    top: -20%;
+    right: -10%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(
+      circle,
+      rgba(255, 107, 53, 0.15) 0%,
+      rgba(255, 107, 53, 0.05) 30%,
+      transparent 70%
+    );
+    border-radius: 50%;
+    animation: float-orb-1 20s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 0;
+    filter: blur(40px);
+  }
+
+  // Purple gradient orb
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -15%;
+    left: -5%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(
+      circle,
+      rgba(255, 140, 90, 0.15) 0%,
+      rgba(255, 140, 90, 0.05) 30%,
+      transparent 70%
+    );
+    border-radius: 50%;
+    animation: float-orb-2 25s ease-in-out infinite reverse;
+    pointer-events: none;
+    z-index: 0;
+    filter: blur(40px);
+  }
+}
+
+// Additional orb for more depth
+@mixin gradient-orbs-extended {
+  @include gradient-orbs;
+
+  // Cyan orb
+  > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  .gradient-orb-3 {
+    content: '';
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(
+      circle,
+      rgba(255, 179, 71, 0.12) 0%,
+      rgba(255, 179, 71, 0.04) 30%,
+      transparent 70%
+    );
+    border-radius: 50%;
+    animation: float-orb-3 18s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 0;
+    filter: blur(50px);
+  }
+}
+
+@keyframes float-orb-1 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(30px, -40px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+}
+
+@keyframes float-orb-2 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(-40px, 30px) scale(1.15);
+  }
+  66% {
+    transform: translate(25px, -25px) scale(0.95);
+  }
+}
+
+@keyframes float-orb-3 {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+}
+
+// ====================================
+// Utility Classes (Optional)
+// ====================================
+
+// Apply these classes directly to elements if needed
+.neural-pattern {
+  @include neural-background;
+}
+
+.gradient-orbs {
+  @include gradient-orbs;
+}
+
+.gradient-orbs-extended {
+  @include gradient-orbs-extended;
+}
+
+.neural-pattern-subtle {
+  @include neural-background-subtle;
+}
+
+.tech-grid {
+  @include tech-grid;
+}
+
+.dot-pattern {
+  @include dot-pattern;
+}
+
+.grid-pattern {
+  @include grid-pattern;
+}
+
+.particle-field {
+  @include particle-field;
+}
+
+// ====================================
+// Pattern for Specific Use Cases
+// ====================================
+
+// Header pattern
+@mixin header-pattern {
+  @include neural-background(0.4, 0.25);
+}
+
+// Modal background pattern
+@mixin modal-pattern {
+  @include neural-background(0.3, 0.2);
+}
+
+// Card hover pattern
+@mixin card-hover-pattern {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    @include dot-pattern(rgba(255, 107, 53, 0.15), 16px);
+    opacity: 0;
+    transition: opacity $transition-base $ease-default;
+    pointer-events: none;
+  }
+
+  &:hover::after {
+    opacity: 0.5;
+  }
+}

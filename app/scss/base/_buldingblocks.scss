@@ -1,0 +1,497 @@
+.buildingpagesize{
+    max-width: 100% !important;
+    font-family: 'Rubik' !important;
+    margin-top: 1%;
+  }
+  .b_headertext{
+    padding-bottom: 1vh;
+    font-weight: 800;
+    font-size: 2vw;
+  }
+  .bulding {
+    &-block {
+      padding: 80px 0 10px !important;
+      background: #eff5fb;
+      position: relative;
+      &::before {
+        content: '';
+        position: absolute;
+        top: -40px;
+        width: 80%;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        // border-bottom: 40px solid #eff5fb;
+        border-left: 40px solid transparent;
+        border-right: 40px solid transparent;
+        @media screen and (max-width: $sm-screen) {
+          display: none;
+        }
+      }
+      @media screen and (max-width: $sm-screen) {
+        padding: 35px 10px;
+        min-height: auto;
+      }
+      .container {
+        max-width: 1024px;
+      }
+      &-title {
+        font-size: 34px;
+        line-height: 44px;
+        width: 85%;
+        margin-bottom: 40px;
+        @media screen and (max-width: $sm-screen) {
+          font-size: 20px;
+          line-height: 30px;
+          width: 100%;
+          margin-bottom: 35px;
+        }
+      }
+      &-subtitle {
+        font-family: $font-primary;
+        margin: 25px 0 65px;
+        font-size: 14px;
+        line-height: 24px;
+        color: #132c3f;
+        opacity: 0.6;
+        font-weight: 500;
+      }
+      .process {
+        &-block {
+          font-size: 14px;
+          color: #132c3f;
+          @media screen and (max-width: $sm-screen) {
+            display: flex;
+            overflow: hidden;
+            overflow-x: auto;
+          }
+        }
+        &-row {
+          align-items: center;
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 50px;
+          @media screen and (max-width: $sm-screen) {
+            margin-bottom: 0;
+            justify-content: flex-start;
+          }
+          &:first-child {
+            .process {
+              &-grid {
+                position: relative;
+                &:first-child {
+                  &::before {
+                    content: '';
+                    position: absolute;
+                    height: 1px;
+                    background: $border-subtle;
+                    width: 120px;
+                    left: -120px;
+                    top: 50%;
+                    @media screen and (max-width: $sm-screen) {
+                      display: none;
+                    }
+                  }
+                  &::after {
+                    content: 'Start';
+                    font-size: 12px;
+                    color: #c8d6e9;
+                    font-weight: 500;
+                    font-family: $font-primary;
+                    position: absolute;
+                    left: -120px;
+                    top: 44%;
+                    text-transform: uppercase;
+                    @media screen and (max-width: $sm-screen) {
+                      display: none;
+                    }
+                  }
+                }
+                &:last-child {
+                  &::after {
+                    content: '\F142';
+                    font-size: 16px;
+                    font: normal normal normal 24px/1 'Material Design Icons';
+                    color: #d10527;
+                    position: absolute;
+                    bottom: -14%;
+                    left: 0;
+                    right: 0;
+                    margin: 0 auto;
+                    text-align: center;
+                    transform: rotate(90deg);
+                    @media screen and (max-width: $sm-screen) {
+                      display: none;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          &:last-child {
+            margin-bottom: 0;
+            position: relative;
+            &::before {
+              content: '';
+              position: absolute;
+              right: -120px;
+              top: -68%;
+              height: 320px;
+              width: 120px;
+              border-radius: 0 10px 10px 0;
+              border-width: 1.4px 1.4px 1.4px 0px;
+              border-style: solid;
+              border-color: $border-subtle;
+              @media screen and (max-width: $sm-screen) {
+                display: none;
+              }
+            }
+            .process {
+              &-grid {
+                position: relative;
+                &:first-child {
+                  &::before {
+                    content: '';
+                    position: absolute;
+                    height: 1px;
+                    background: $border-subtle;
+                    width: 120px;
+                    left: -120px;
+                    top: 50%;
+                    @media screen and (max-width: $sm-screen) {
+                      display: none;
+                    }
+                  }
+                  &::after {
+                    content: 'End';
+                    font-size: 12px;
+                    color: #c8d6e9;
+                    font-weight: 500;
+                    font-family: $font-primary;
+                    position: absolute;
+                    left: -120px;
+                    top: 44%;
+                    text-transform: uppercase;
+                    @media screen and (max-width: $sm-screen) {
+                      display: none;
+                    }
+                  }
+                }
+                &:nth-child(2n) {
+                  &::before {
+                    transform: rotate(180deg);
+                  }
+                  &::after {
+                    transform: rotate(180deg);
+                  }
+                }
+                &:last-child {
+                  margin-right: 0;
+                }
+              }
+            }
+          }
+        }
+        &-grid {
+          width: 30%;
+          background: #fff;
+          padding: 25px 30px;
+          height: 270px;
+          box-shadow: 0 20px 20px -15px #dae5f4;
+          border-radius: 5px;
+          @media screen and (max-width: $sm-screen) {
+            width: 220px;
+            padding: 15px 10px;
+            text-align: center;
+            margin-right: 10px;
+          }
+          &:nth-child(2n) {
+            &::before {
+              content: '\F142';
+              font-size: 16px;
+              font: normal normal normal 24px/1 'Material Design Icons';
+              color: #d10527;
+              position: absolute;
+              top: 50%;
+              left: -12%;
+              @media screen and (max-width: $sm-screen) {
+                display: none;
+              }
+            }
+            &::after {
+              content: '\F142';
+              font-size: 16px;
+              font: normal normal normal 24px/1 'Material Design Icons';
+              color: #d10527;
+              position: absolute;
+              top: 50%;
+              right: -12%;
+              @media screen and (max-width: $sm-screen) {
+                display: none;
+              }
+            }
+          }
+        }
+        &-title {
+          line-height: 21px;
+          font-size: 16px;
+          color: $text-secondary;
+        }
+        &-icon {
+          align-items: center;
+          display: flex;
+          justify-content: space-between;
+          margin: 15px 0;
+          @media screen and (max-width: $sm-screen) {
+            justify-content: center;
+          }
+        }
+        &-content {
+          color: #132c3f;
+          font-family: $font-primary;
+          font-size: 12px;
+          font-weight: 500;
+          line-height: 21px;
+          opacity: 0.6;
+          letter-spacing: 0.6px;
+        }
+      }
+    }
+  }
+  .buildingcontentheight{
+      height: 100% !important;
+  }
+  .buildingfirstblockstyle{
+      // background-color: #e0e0e08c;
+      .rowstyle{
+          padding-top: 2%;
+      }
+      .countsize{
+        font-weight: 600;
+         font-size: 1.0vw;
+         color: gray;
+      }
+      .buldingtitle{
+        padding-bottom: 0.2vh;
+        font-weight: 600;
+        font-size: 1.5vw;
+      }
+      .buldingtitle:before {
+        content : "";
+        position: absolute;
+        left    : 1.2vw;
+        bottom  : 0;
+        height  : 5px;
+        width   : 4.0vw;
+        border-bottom:5px solid $accent-primary;
+        //color: $accent-primary !important;
+      }
+      .buldingfirstcontent{
+            margin-top: 3%;
+            font-weight: 900;
+            font-size: 1.1vw;
+            text-align: justify;
+            div{
+                    // padding-bottom: 0.1vh;
+                    font-weight: 900;
+                    font-size: 1vw;
+                    color: $accent-primary;
+                  
+            }
+            div:before {
+                content : "";
+                position: absolute;
+                left    : 1.2vw;
+                bottom  : 0;
+                height  : 5px;
+                width   : 11.5vw;
+                border-bottom:0.1vw solid $accent-primary;
+                //color: $accent-primary !important;
+              }
+             
+      }
+      .buldingsecondcontent{
+        margin-top: 3%;
+        font-weight: 900;
+         font-size: 1vw;
+  }
+  }
+
+
+  .buildingthirdblockstyle{
+    .rowstyle{
+        padding-top: 1.1%;
+    }
+    .countsize{
+      font-weight: 600;
+       font-size: 1.0vw;
+       color: gray;
+    }
+    .buldingtitle{
+      padding-bottom: 0.2vh;
+      font-weight: 600;
+      font-size: 1.5vw;
+    }
+    .buldingtitle:before {
+      content : "";
+      position: absolute;
+      left    : 1.2vw;
+              bottom  : 0;
+              height  : 5px;
+              width   : 4vw;
+      border-bottom:5px solid $accent-primary;
+      //color: $accent-primary !important;
+    }
+    .buldingfirstcontent{
+          margin-top: 3%;
+          font-weight: 900;
+          font-size: 1.1vw;
+          div{
+                  // padding-bottom: 0.1vh;
+                  font-weight: 900;
+                  font-size: 1vw;
+                  color: $accent-primary;
+                
+          }
+          div:before {
+              content : "";
+              position: absolute;
+              left    : 0.8vw;
+              bottom  : 0;
+              height  : 5px;
+              width   : 11.0vw;
+              border-bottom:0.1vw solid $accent-primary;
+              //color: $accent-primary !important;
+            }
+    }
+    .buldingsecondcontent{
+      margin-top: 3%;
+      font-weight: 900;
+       font-size: 1vw;
+}
+}
+
+
+  .buldingtechimage {
+    width: 100%; /* or any custom size */
+    height: 100%; 
+    position:relative;
+    object-fit: contain;
+    // text-align: left;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12vh;
+}
+.childheader{
+    margin-top: 8%;
+    li{
+        font-size:1vw !important;
+        // font-weight: bold;
+        font-weight: 600;
+        // letter-spacing: 2px;
+        // width: 100%;
+        will-change: transform, opacity;
+        line-height: 5.0vh;
+       
+        .litextblock{
+            padding-left: 1px !important; 
+
+        }
+    }
+    .liicon { 
+        content: "";   
+        color: rgb(146, 150, 146);  
+       // display: inline-block;  
+        // width: 0.1em; 
+        margin-left: 0em; 
+        font-weight: 800;
+        font-size:2.5rem;
+    } 
+}
+.methodloygstyle{
+    div{
+   height: 15vh;
+   //background-color:#0D004E;
+   background-color:  $accent-primary;;
+   margin-top: 1vh;
+   color: white;
+   font-weight: 200;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   line-height: 4vh;
+   font-size:1vw !important;
+   border-radius: 25px;
+   padding-left: 10px;
+    }
+}
+.activemathedlogy{
+  color: $accent-primary;
+}
+.buldingblockexcecution{
+    //width: 100%; /* or any custom size */
+    height: 60vh; 
+  .buldingblockimage{
+    width: 10vw; /* or any custom size *///
+    height: 16vh;
+    img{
+      width: 10vw !important; /* or any custom size *///
+      height: 14vh !important;
+    }
+    position:relative;
+    //object-fit: contain;
+    text-align: left;
+    display: flex;
+   // justify-content: space-between;
+    //margin: 0 auto; /* Center it */
+  }
+  //.buldingblockimage img {vertical-align: middle;}
+  .buldingblockimage .content {
+    position: absolute; /* Position the background text */
+    bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+    //background: rgb(0, 0, 0); /* Fallback color */
+    //background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+    color: black; /* Grey text */
+    width: 100%; /* Full width */
+    padding-bottom: 40px; /* Some padding */
+    h1{
+      font-size:1.5vw ;
+      font-weight: 800;
+    }
+  }
+  .contentarrow{
+    margin-top: 20%;
+  }
+  .contentdisplay{
+    display: none;
+  }
+
+}
+.buldingmethology {
+  width: 100%; /* or any custom size */
+  height: 100%; 
+  position:relative;
+  object-fit: contain;
+  // text-align: left;
+  display: flex;
+  justify-content: space-between;
+  margin: 10% 0;
+}
+.innerfontstyle{
+  font-weight: 900;
+  font-size: 1vw;
+}
+.buldingfirstcontentstyles{
+  line-height: 4.5vh !important;
+}
+.buldingsubheader{
+  font-weight: bold;
+  margin-bottom: 2%;
+  //color: $accent-primary;
+  span{
+    font-weight: 900;
+    font-size: 1vw;
+    border-bottom:0.1vw solid $accent-primary;
+    //color: $accent-primary;
+  }
+}

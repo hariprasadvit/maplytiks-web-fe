@@ -1,0 +1,13 @@
+# Dependency directories
+node_modules/
+jspm_packages/
+# Optional npm cache directory
+.npm
+.history
+#Log/
+#config/environment/development.js
+.vscode/
+package-lock.json
+#.eslintrc.json
+.DS_Store
+build/

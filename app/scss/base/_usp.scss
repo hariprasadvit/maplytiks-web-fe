@@ -1,0 +1,247 @@
+
+.pagesize{
+    max-width: 100% !important;
+    margin-top: 1vh;
+    font-family: 'Rubik'
+  }
+ .titlestyle{
+    padding-bottom: 1vh;
+    font-weight: 800;
+    font-size: 2vw;
+  }
+  .titlestyle:before {
+    content : "";
+    position: absolute;
+    left    : 25px;
+    bottom  : 0;
+    height  : 15px;
+    width   : 4%;
+    border-bottom:5px solid $accent-primary;
+    //color: $accent-primary !important;
+  }
+  .contentst{
+      max-height: 30vh;
+      margin-top: 5vh;
+  }
+  .contenthedertextstyle{
+  // border-bottom: 4px solid white;
+   font-weight: 900;
+   font-size: 1.1vw;
+   color: $accent-primary;
+  }
+  .contenttextstyle{
+    // border-bottom: 4px solid white;
+     font-weight: 300;
+     margin-top: 1vh;
+     //font-size: 1vw;
+    }
+  .img {
+    width: 15vw; /* or any custom size */
+    height: 17vh; 
+    position:relative;
+    object-fit: contain;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+    transition: all .8s ease-in-out;  
+}
+.usp {
+    &-block {
+      padding: 90px 0;
+      position: relative;
+      &::before {
+        content: '';
+        position: absolute;
+        top: -30px;
+        width: 80%;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+       // border-bottom: 30px solid #fff;
+        border-left: 30px solid transparent;
+        border-right: 30px solid transparent;
+        @media screen and (max-width: $sm-screen) {
+          display: none;
+        }
+      }
+      @media screen and (max-width: $sm-screen) {
+        background: #eff5fb;
+        padding: 35px 10px;
+        border-bottom: 1px solid #e2eaf4;
+        min-height: auto;
+      }
+      .container {
+        max-width: 1170px;
+      }
+      .line1 {
+        position: absolute;
+        left: 49%;
+        top: -30px;
+        height: 460px;
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1407;
+        will-change: stroke-dashoffset;
+        &.animate {
+          animation: dash2000 4s linear forwards;
+        }
+        @media screen and (max-width: $sm-screen) {
+          display: none;
+        }
+      }
+      .line2 {
+        position: absolute;
+        left: 72%;
+        top: -30px;
+        height: 100%;
+        stroke: rgb(226, 234, 244);
+        stroke-width: 1;
+        stroke-dasharray: 2000;
+        stroke-dashoffset: 2010;
+        will-change: stroke-dashoffset;
+        &.animate {
+          animation: dash1000 4s linear forwards;
+        }
+        @media screen and (max-width: $sm-screen) {
+          display: none;
+        }
+      }
+      &-slider {
+        display: flex;
+        margin-top: 65px;
+        @media screen and (max-width: $sm-screen) {
+          flex-direction: column;
+          margin-top: 30px;
+          background: $white;
+          box-shadow: 0 20px 20px -15px #dae5f4;
+          border-radius: 10px;
+          padding: 25px 15px 20px;
+        }
+        &-left {
+          width: 55%;
+          min-height: 341px;
+          @media screen and (max-width: $sm-screen) {
+            width: 100%;
+            min-height: auto;
+          }
+        }
+        &-right {
+          z-index: 2;
+          position: relative;
+          width: 45%;
+          @media screen and (max-width: $sm-screen) {
+            width: 100%;
+            height: 200px;
+          }
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+        &-count {
+          font-size: 14px;
+          font-weight: 600;
+          letter-spacing: 2px;
+          font-family: montserrat, sans-serif;
+        }
+        &-title {
+          font-size: 34px;
+          line-height: 44px;
+          letter-spacing: 3px;
+          margin: 35px 0 50px;
+          width: 75%;
+          @media screen and (max-width: $sm-screen) {
+            width: 100%;
+            margin: 15px 0;
+            font-size: 20px;
+            line-height: 30px;
+            letter-spacing: 2px;
+          }
+        }
+        &-content {
+          font-size: 16px;
+          line-height: 28px;
+          font-weight: 500;
+          color: #132c3f;
+          opacity: 0.5;
+          font-family: montserrat, sans-serif;
+          width: 55%;
+          @media screen and (max-width: $sm-screen) {
+            width: 100%;
+            font-size: 12px;
+            line-height: 21px;
+            margin-bottom: 25px;
+          }
+        }
+        &-nav {
+          display: flex;
+          align-items: center;
+          margin-top: 65px;
+          @media screen and (max-width: $sm-screen) {
+            margin: 35px auto 0;
+            width: 90%;
+          }
+          span {
+            cursor: pointer;
+            svg {
+              opacity: 0.5;
+              transition: all 0.3s ease-in-out 0s;
+              &:hover {
+                opacity: 1;
+              }
+            }
+          }
+          .hide {
+            visibility: hidden;
+          }
+          ul {
+            display: flex;
+            align-items: center;
+            height: 30px;
+            @media screen and (max-width: $sm-screen) {
+              width: calc(100% - 50px);
+              justify-content: space-between;
+              padding: 0 5%;
+            }
+            li {
+              margin: 0 30px;
+              font-size: 14px;
+              line-height: 18px;
+              color: #132c3f;
+              opacity: 0.5;
+              font-family: Montserrat;
+              cursor: pointer;
+              transition: opacity 0.3s ease-in-out 0s,
+                font-weight 0.1s ease-in-out 0s, transform 200ms ease-in-out;
+              will-change: font-weight, font-size;
+              @media screen and (max-width: $sm-screen) {
+                margin: auto;
+              }
+              &.active {
+                // font-size: 24px;
+                // line-height: 30px;
+                opacity: 1;
+                font-weight: 600;
+                transform: scale(1.7);
+              }
+              &:hover {
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .colmpadding{
+      text-align: left;
+      margin-left: 2vw;
+  }
+  .inline {
+    font-size: 22px;
+  }
+  
+  .img:hover {
+    transform: scale(1.25);
+   }
