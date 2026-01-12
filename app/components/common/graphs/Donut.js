@@ -8,27 +8,28 @@ import {
 import PropTypes from 'prop-types';
 import * as d3 from 'd3';
 
+// Warm color scheme - Orange/Yellow shades only (brand colors)
 const COLOR_SCHEMES = {
-  default: ['#ff0808', '#f0ff0e', '#2a9e94', '#006600','#C30093','#2DDDCC','#E5A229','#640EFF'],
-  home: ['#80ff80', '#f0ff0e', '#2a9e94', '#006600','#C30093','#2DDDCC','#E5A229','#640EFF'],
+  default: ['#FF6B35', '#F7931E', '#FFB800', '#FF8C42', '#FFA94D', '#E85D04', '#FFBA49', '#DC6B19'],
+  home: ['#FF6B35', '#F7931E', '#FFB800', '#FF8C42', '#FFA94D', '#E85D04', '#FFBA49', '#DC6B19'],
   ce: [
-    '#ff0808',
-    '#f0ff0e',
-    '#2a9e94',
-    '#006600',
-    '#C30093',
-    '#2DDDCC',
-    '#E5A229',
-    '#640EFF',
+    '#FF6B35',  // Primary orange (0.7-1.0)
+    '#FFB800',  // Golden yellow (1.0-3.0)
+    '#FF8C42',  // Light orange (3.0-5.0)
+    '#F7931E',  // Amber (>5.0)
+    '#FFA94D',
+    '#E85D04',
+    '#FFBA49',
+    '#DC6B19',
   ],
-  red: ['#ff0808', '#f0ff0e', '#2a9e94', '#006600'],
-  blue: ['#ff0808', '#f0ff0e', '#2a9e94', '#006600'],
-  green: ['#ff0808', '#f0ff0e', '#2a9e94', '#006600'],
-  grey: ['#ff0808', '#f0ff0e', '#2a9e94', '#006600'],
-  pink: ['#ff0808', '#f0ff0e', '#2a9e94', '#006600'],
-  teal: ['#2DDDCC', '#2DDDCC', '#2DDDCC', '#2DDDCC'],
-  yellow: ['#E5A229', '#E5A229', '#E5A229', '#E5A229'],
-  purple: ['#f0ff0e', '#640EFF', '#640EFF', '#640EFF'],
+  red: ['#FF6B35', '#F97316', '#E85D04', '#DC6B19'],
+  blue: ['#FF6B35', '#F7931E', '#FFB800', '#FF8C42'],
+  green: ['#FF6B35', '#F7931E', '#FFB800', '#FF8C42'],
+  grey: ['#FF6B35', '#F7931E', '#FFB800', '#FF8C42'],
+  pink: ['#FF6B35', '#F7931E', '#FFB800', '#FF8C42'],
+  teal: ['#FF6B35', '#F7931E', '#FFB800', '#FF8C42'],
+  yellow: ['#FFB800', '#F7931E', '#FFA94D', '#FFBA49'],
+  purple: ['#FF6B35', '#F7931E', '#FFB800', '#FF8C42'],
 };
 
 const FONT_CLASS_CONFIG = {
@@ -235,7 +236,29 @@ const Donut = ({
 
   return (
     <svg width={width} height={height}>
+      {/* SVG Definitions for glow effect */}
+      <defs>
+        <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+          <feMerge>
+            <feMergeNode in="coloredBlur"/>
+            <feMergeNode in="SourceGraphic"/>
+          </feMerge>
+        </filter>
+        <radialGradient id="innerGlow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stopColor="rgba(255, 107, 53, 0.15)"/>
+          <stop offset="100%" stopColor="transparent"/>
+        </radialGradient>
+      </defs>
       <g ref={graphGroupRef} width={innerWidth} height={innerHeight}>
+        {/* Outer glow ring */}
+        <circle
+          transform={`translate(${radius + margin.left},${radius + margin.top})`}
+          r={radius + 2}
+          fill="none"
+          stroke="rgba(255, 107, 53, 0.1)"
+          strokeWidth="1"
+        />
         <circle
           ref={shadowCircleBottomRef}
           transform={`translate(${radius + margin.left + 1},${radius +
@@ -243,7 +266,7 @@ const Donut = ({
             1})`}
           className="shadow-circle-bottom"
           r={innerCircleRadius - 1.5}
-          fill="#737171"
+          fill="rgba(18, 18, 24, 0.95)"
         />
         <circle
           ref={shadowCircleTopRef}
@@ -251,7 +274,13 @@ const Donut = ({
             margin.top})`}
           className="shadow-circle-top"
           r={customInnerCircleRadius || innerCircleRadius}
-          fill="#fff"
+          fill="#0f0f14"
+        />
+        {/* Inner subtle glow */}
+        <circle
+          transform={`translate(${radius + margin.left},${radius + margin.top})`}
+          r={customInnerCircleRadius || innerCircleRadius}
+          fill="url(#innerGlow)"
         />
         <circle
           ref={outerRingCircleRef}
@@ -260,7 +289,7 @@ const Donut = ({
           className="outer-ring"
           r={radius}
           fill="none"
-          stroke="#E2EAF4"
+          stroke="rgba(255, 255, 255, 0.08)"
           strokeWidth="1"
         />
 

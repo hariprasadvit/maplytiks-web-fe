@@ -151,7 +151,37 @@ const Programs = ({
               </div>
               <div className="programs__dataBody">
                 <div className="programs__dataChart">
-                  <img src={chart} alt="" />
+                  <div className="programs__dataChart-wrapper">
+                    <div className="programs__dataChart-circular">
+                      <svg viewBox="0 0 200 200" className="circular-chart">
+                        <circle
+                          className="circular-bg"
+                          cx="100"
+                          cy="100"
+                          r="80"
+                          fill="none"
+                          stroke="rgba(255,255,255,0.15)"
+                          strokeWidth="8"
+                        />
+                        <circle
+                          className="circular-progress"
+                          cx="100"
+                          cy="100"
+                          r="80"
+                          fill="none"
+                          stroke="#FF6B35"
+                          strokeWidth="10"
+                          strokeLinecap="round"
+                          strokeDasharray="352 502"
+                          style={{ filter: 'drop-shadow(0 0 6px rgba(255, 107, 53, 0.5))' }}
+                        />
+                      </svg>
+                      <div className="circular-center">
+                        <div className="circular-time">HH:MM:SS</div>
+                      </div>
+                    </div>
+                    <div className="programs__dataChart-label">Exposure Distribution</div>
+                  </div>
                 </div>
                 <div className="programs__dataOverview">
                   <div className="programs__dataGrid">
@@ -246,7 +276,37 @@ const Programs = ({
               </div>
               <div className="programs__dataBody">
                 <div className="programs__dataChart">
-                  <img src={chart} alt="" />
+                  <div className="programs__dataChart-wrapper">
+                    <div className="programs__dataChart-circular">
+                      <svg viewBox="0 0 200 200" className="circular-chart">
+                        <circle
+                          className="circular-bg"
+                          cx="100"
+                          cy="100"
+                          r="80"
+                          fill="none"
+                          stroke="rgba(255,255,255,0.15)"
+                          strokeWidth="8"
+                        />
+                        <circle
+                          className="circular-progress"
+                          cx="100"
+                          cy="100"
+                          r="80"
+                          fill="none"
+                          stroke="#FF6B35"
+                          strokeWidth="10"
+                          strokeLinecap="round"
+                          strokeDasharray="352 502"
+                          style={{ filter: 'drop-shadow(0 0 6px rgba(255, 107, 53, 0.5))' }}
+                        />
+                      </svg>
+                      <div className="circular-center">
+                        <div className="circular-time">HH:MM:SS</div>
+                      </div>
+                    </div>
+                    <div className="programs__dataChart-label">Exposure Distribution</div>
+                  </div>
                 </div>
                 <div className="programs__dataOverview">
                   <div className="programs__dataGrid">

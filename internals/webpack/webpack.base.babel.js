@@ -83,6 +83,16 @@ module.exports = options => ({
         use: ['url-loader?limit=10000', 'img-loader'],
       },
       {
+        test: /\.webp$/,
+        use: {
+          loader: 'url-loader',
+          options: {
+            limit: 10000,
+            mimetype: 'image/webp',
+          },
+        },
+      },
+      {
         test: /\.html$/,
         use: 'html-loader',
       },

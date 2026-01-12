@@ -28,10 +28,11 @@
     }
   }
 
-  // Sidebar navigation
+  // Sidebar navigation - Sci-Fi Theme
   &-sidebar {
-    width: 12%;
+    width: 14%;
     margin-left: 10px;
+    padding: 20px 0;
     @media screen and (max-width: $sm-screen) {
       width: auto;
       flex: 1 0 100%;
@@ -50,71 +51,57 @@
       }
     }
     li {
-      margin-bottom: 25px;
+      margin-bottom: 8px;
+      padding: 12px 16px;
       font-family: $font-primary;
       font-weight: 500;
       font-size: 14px;
-      color: $text-secondary;
-      opacity: 0.8;
+      color: rgba(255, 255, 255, 0.5);
       position: relative;
       text-align: left;
       cursor: pointer;
-      transition: all $transition-base $ease-out;
+      transition: all 0.3s ease;
+      border-radius: 8px;
+      background: transparent;
+      border-left: 2px solid transparent;
 
       @media screen and (max-width: $sm-screen) {
         font-size: 12px;
         line-height: 15px;
-        opacity: 1;
-        margin: 0 25px 0 0;
+        margin: 0 10px 0 0;
+        padding: 10px 14px;
       }
 
       &:hover {
-        color: $text-primary;
-        opacity: 1;
+        color: rgba(255, 255, 255, 0.9);
+        background: rgba(255, 107, 53, 0.08);
+        border-left-color: rgba(255, 107, 53, 0.3);
       }
 
       &.active {
-        font-weight: 700;
-        color: $text-white;
-        opacity: 1;
+        font-weight: 600;
+        color: #ffffff;
+        background: rgba(255, 107, 53, 0.12);
+        border-left-color: $accent-primary;
+        box-shadow: 0 0 20px rgba(255, 107, 53, 0.1);
 
         @media screen and (max-width: $sm-screen) {
           font-size: 14px;
           line-height: 18px;
         }
 
-        // Connection line
+        // Glow indicator line
         &::before {
           content: '';
-          height: 2px;
-          width: 100%;
           position: absolute;
-          left: calc(-72% - 77px);
-          background: linear-gradient(90deg, transparent 0%, $accent-primary 100%);
+          left: 0;
           top: 50%;
-          box-shadow: 0 0 10px rgba(255, 107, 53, 0.5);
-
-          @media screen and (max-width: $sm-screen) {
-            display: none;
-          }
-        }
-
-        // Active dot indicator
-        &::after {
-          content: '\25cf';
-          position: absolute;
-          left: -35px;
-          font-size: 18px;
-          color: $accent-primary;
-          top: 3px;
-          height: 20px;
-          width: 20px;
-          border: 2px solid $accent-primary;
-          border-radius: 50%;
-          line-height: 15.5px;
-          text-indent: 3.5px;
-          box-shadow: 0 0 15px rgba(255, 107, 53, 0.6), inset 0 0 10px rgba(255, 107, 53, 0.3);
-          animation: glow-pulse 2s ease-in-out infinite;
+          transform: translateY(-50%);
+          width: 3px;
+          height: 60%;
+          background: $accent-primary;
+          border-radius: 0 2px 2px 0;
+          box-shadow: 0 0 10px rgba(255, 107, 53, 0.6);
 
           @media screen and (max-width: $sm-screen) {
             display: none;
@@ -126,7 +113,7 @@
 
   // Main content area
   &-main {
-    width: 88%;
+    width: 86%;
     min-height: calc(100vh * 80 / 100);
     @media screen and (max-width: $sm-screen) {
       width: auto;
@@ -499,6 +486,69 @@
           width: 100%;
           object-fit: cover;
         }
+
+        // Platform illustration styling
+        &.platform-illustration {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: linear-gradient(
+            135deg,
+            rgba(20, 20, 30, 0.95) 0%,
+            rgba(15, 15, 25, 0.98) 50%,
+            rgba(10, 10, 20, 1) 100%
+          );
+          border-radius: 12px;
+
+          svg {
+            width: 80%;
+            height: 80%;
+            max-width: 150px;
+            max-height: 150px;
+          }
+
+          // Animated border glow
+          &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 12px;
+            padding: 1px;
+            background: linear-gradient(
+              135deg,
+              rgba(255, 107, 53, 0.3) 0%,
+              rgba(255, 107, 53, 0.1) 50%,
+              rgba(255, 107, 53, 0.3) 100%
+            );
+            -webkit-mask:
+              linear-gradient(#fff 0 0) content-box,
+              linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+          }
+
+          // Subtle pulse animation
+          &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60%;
+            height: 60%;
+            background: radial-gradient(
+              circle,
+              rgba(255, 107, 53, 0.1) 0%,
+              transparent 70%
+            );
+            animation: platformPulse 3s ease-in-out infinite;
+            pointer-events: none;
+          }
+        }
       }
 
       &-overlay {
@@ -577,6 +627,18 @@
         padding-right: 10px;
       }
     }
+  }
+}
+
+// Platform illustration pulse animation
+@keyframes platformPulse {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 0.7;
   }
 }
 

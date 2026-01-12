@@ -186,11 +186,8 @@ const ProjectCard = ({
         className={`programs__body ${
           activeIndex === iterationIndex && isActive ? 'active' : ''
         }`}
-        style={{ backgroundImage: `url(${project.projectCardImg})` }}
       >
-        <div className="programs__bgimage">
-          <img src={project.projectCardImg} alt="" />
-        </div>
+        {/* Background image removed for dark theme */}
         <div className="programs__sidenav">
           {!isOnlySinglePlatform && overviewIndex >= 0 && (
             <div

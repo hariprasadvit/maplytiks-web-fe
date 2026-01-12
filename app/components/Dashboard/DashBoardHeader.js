@@ -18,6 +18,7 @@ import {
   mdiFilterOutline,
 } from '@mdi/js';
 import useDropdownClose from 'components/common/hooks/useDropdownClose';
+import futsalBanner from 'images/futsal.png';
 
 const MEDIA_MAP = {
   BC: 'Broadcast',
@@ -101,9 +102,9 @@ const DashBoardHeader = ({
           style={{
             background: isSticky
               ? '#0d0d0d'
-              : `linear-gradient(0deg,rgba(0, 0, 0, 0.65),rgba(13, 13, 13, 0.25)),url(${
-                  data.eventImage
-                })`,
+              : `url(${futsalBanner})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
           }}
         >
           <div className="analyticHeader__details">

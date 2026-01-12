@@ -3314,18 +3314,62 @@ footer {
 
 .analytics__moveToTop {
   position: fixed;
-  left: 96%;
-  bottom: 73px;
-  background: #bc2a26;
-  border-radius: 7px;
-  padding: 4px;
+  right: 20px;
+  bottom: 80px;
+  background: linear-gradient(135deg, $accent-primary 0%, darken($accent-primary, 10%) 100%);
+  border-radius: 10px;
+  padding: 10px;
   cursor: pointer;
+  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+  transition: all 0.2s ease;
+  z-index: 100;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 107, 53, 0.5);
+  }
+
+  @media (max-width: 767px) {
+    right: 15px;
+    bottom: 60px;
+    padding: 8px;
+  }
 }
 
 .slideNext {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 10;
+
   span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
     svg {
-      fill: #000 !important;
+      fill: $text-primary !important;
+      width: 20px;
+      height: 20px;
+    }
+
+    &:hover {
+      background: rgba(255, 107, 53, 0.15);
+      border-color: rgba(255, 107, 53, 0.4);
+    }
+  }
+
+  @media (max-width: 767px) {
+    span {
+      width: 32px;
+      height: 32px;
     }
   }
 }

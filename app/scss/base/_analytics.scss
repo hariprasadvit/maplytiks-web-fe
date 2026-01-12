@@ -2087,28 +2087,28 @@
           margin-right: 10px;
           &.dot {
             &-1 {
-              background: #80ff80;
+              background: #FF6B35; // Primary orange (0.7-1.0)
             }
             &-2 {
-              background: $accent-primary;
+              background: #FFB800; // Golden yellow (1.0-3.0)
             }
             &-3 {
-              background: #2a9e94;
+              background: #FF8C42; // Light orange (3.0-5.0)
             }
             &-4 {
-              background: #006600;
+              background: #F7931E; // Amber (>5.0)
             }
             &-5 {
-              background: #c30093;
+              background: #FFA94D;
             }
             &-6 {
-              background: #2dddcc;
+              background: #E85D04;
             }
             &-7 {
-              background: #f0ff0e;
+              background: #FFBA49;
             }
             &-8 {
-              background: #640eff;
+              background: #DC6B19;
             }
           }
         }
@@ -2657,31 +2657,31 @@
         height: 10px;
         width: 10px;
         border-radius: 5px;
-        background-color: #f0ff0e;
+        background-color: #FF6B35;
         top: 0;
         left: -16px;
       }
     }
     .stage1 {
       &::before {
-        background: #ff0808;
+        background: #FF6B35; // Primary orange (0.7-1.0)
       }
     }
     .stage2 {
       &::before {
-        background-color: #f0ff0e !important;
+        background-color: #FFB800 !important; // Golden yellow (1.0-3.0)
       }
     }
 
     .stage3 {
       &::before {
-        background-color: #2a9e94 !important;
+        background-color: #FF8C42 !important; // Light orange (3.0-5.0)
       }
     }
 
     .stage4 {
       &::before {
-        background-color: #008000 !important;
+        background-color: #F7931E !important; // Amber (>5.0)
       }
     }
 
@@ -2792,7 +2792,7 @@
       &-row {
         &.active {
           &::before {
-            background-color: #ff0808;
+            background-color: #FF6B35;
           }
         }
       }
@@ -2801,22 +2801,22 @@
       &-item {
         .stage1 {
           &::before {
-            background: #ff0808;
+            background: #FF6B35;
           }
         }
         .stage2 {
           &::before {
-            background: #f0ff0e !important;
+            background: #FFB800 !important;
           }
         }
         .stage3 {
           &::before {
-            background: #2a9e94 !important;
+            background: #FF8C42 !important;
           }
         }
         .stage4 {
           &::before {
-            background: #008000 !important;
+            background: #F7931E !important;
           }
         }
       }
@@ -2833,7 +2833,7 @@
       &-row {
         &.active {
           &::before {
-            background-color: #008000;
+            background-color: #F7931E;
           }
         }
       }
@@ -2842,22 +2842,22 @@
       &-item {
         .stage1 {
           &::before {
-            background: #ff0808;
+            background: #FF6B35;
           }
         }
         .stage2 {
           &::before {
-            background: #f0ff0e !important;
+            background: #FFB800 !important;
           }
         }
         .stage3 {
           &::before {
-            background: #2a9e94 !important;
+            background: #FF8C42 !important;
           }
         }
         .stage4 {
           &::before {
-            background: #008000 !important;
+            background: #F7931E !important;
           }
         }
       }
@@ -2883,22 +2883,22 @@
       &-item {
         .stage1 {
           &::before {
-            background: #ff0808;
+            background: #FF6B35;
           }
         }
         .stage2 {
           &::before {
-            background: #f0ff0e !important;
+            background: #FFB800 !important;
           }
         }
         .stage3 {
           &::before {
-            background: #2a9e94 !important;
+            background: #FF8C42 !important;
           }
         }
         .stage4 {
           &::before {
-            background: #008000 !important;
+            background: #F7931E !important;
           }
         }
       }
@@ -2924,22 +2924,22 @@
       &-item {
         .stage1 {
           &::before {
-            background: #ff0808;
+            background: #FF6B35;
           }
         }
         .stage2 {
           &::before {
-            background: #f0ff0e !important;
+            background: #FFB800 !important;
           }
         }
         .stage3 {
           &::before {
-            background: #2a9e94 !important;
+            background: #FF8C42 !important;
           }
         }
         .stage4 {
           &::before {
-            background: #008000 !important;
+            background: #F7931E !important;
           }
         }
       }
@@ -2965,22 +2965,22 @@
       &-item {
         .stage1 {
           &::before {
-            background: #ff0808;
+            background: #FF6B35;
           }
         }
         .stage2 {
           &::before {
-            background: #f0ff0e !important;
+            background: #FFB800 !important;
           }
         }
         .stage3 {
           &::before {
-            background: #2a9e94 !important;
+            background: #FF8C42 !important;
           }
         }
         .stage4 {
           &::before {
-            background: #008000 !important;
+            background: #F7931E !important;
           }
         }
       }
@@ -3006,22 +3006,22 @@
       &-item {
         .stage1 {
           &::before {
-            background: #ff0808;
+            background: #FF6B35;
           }
         }
         .stage2 {
           &::before {
-            background: #f0ff0e !important;
+            background: #FFB800 !important;
           }
         }
         .stage3 {
           &::before {
-            background: #2a9e94 !important;
+            background: #FF8C42 !important;
           }
         }
         .stage4 {
           &::before {
-            background: #008000 !important;
+            background: #F7931E !important;
           }
         }
       }
@@ -3047,22 +3047,22 @@
       &-item {
         .stage1 {
           &::before {
-            background: #ff0808;
+            background: #FF6B35;
           }
         }
         .stage2 {
           &::before {
-            background: #f0ff0e !important;
+            background: #FFB800 !important;
           }
         }
         .stage3 {
           &::before {
-            background: #2a9e94 !important;
+            background: #FF8C42 !important;
           }
         }
         .stage4 {
           &::before {
-            background: #008000 !important;
+            background: #F7931E !important;
           }
         }
       }

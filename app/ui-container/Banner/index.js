@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Slider from 'react-slick';
 // eslint-disable-next-line import/no-unresolved
-import banner1 from 'images/Landing-Page-Image.png';
+import banner1 from 'images/futsal.png';
 import banner2a from 'images/Forefront.png';
 import banner2b from 'images/Trustworthy.png';
 import banner2c from 'images/Technical.png';
