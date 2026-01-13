@@ -3213,7 +3213,7 @@ footer {
   .DateRangePicker {
     position: absolute;
     left: 1px;
-    z-index: 999;
+    z-index: 99999;
   }
 }
 
@@ -3232,6 +3232,7 @@ footer {
   border-radius: 0 0 5px 5px;
   box-shadow: 0 20px 20px -15px #dae5f4;
   padding: 30px !important;
+  z-index: 99999 !important;
   @media screen and (max-width: $sm-screen) {
     flex-direction: column;
     width: 100%;
