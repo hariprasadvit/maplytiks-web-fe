@@ -2090,22 +2090,22 @@
           margin-right: 10px;
           &.dot {
             &-1 {
-              background: #FF6B35; // Primary orange (0.7-1.0)
+              background: #E74C3C !important; // Red (0.7-1.0)
             }
             &-2 {
-              background: #FFB800; // Golden yellow (1.0-3.0)
+              background: #3498DB !important; // Blue (1.0-3.0)
             }
             &-3 {
-              background: #FF8C42; // Light orange (3.0-5.0)
+              background: #2ECC71 !important; // Green (3.0-5.0)
             }
             &-4 {
-              background: #F7931E; // Amber (>5.0)
+              background: #E91E63 !important; // Pink (>5.0)
             }
             &-5 {
-              background: #FFA94D;
+              background: #9B59B6 !important; // Purple
             }
             &-6 {
-              background: #E85D04;
+              background: #F39C12 !important; // Orange
             }
             &-7 {
               background: #FFBA49;
@@ -2667,24 +2667,24 @@
     }
     .stage1 {
       &::before {
-        background: #FF6B35; // Primary orange (0.7-1.0)
+        background: #E74C3C !important; // Red (0.7-1.0)
       }
     }
     .stage2 {
       &::before {
-        background-color: #FFB800 !important; // Golden yellow (1.0-3.0)
+        background-color: #3498DB !important; // Blue (1.0-3.0)
       }
     }
 
     .stage3 {
       &::before {
-        background-color: #FF8C42 !important; // Light orange (3.0-5.0)
+        background-color: #2ECC71 !important; // Green (3.0-5.0)
       }
     }
 
     .stage4 {
       &::before {
-        background-color: #F7931E !important; // Amber (>5.0)
+        background-color: #E91E63 !important; // Pink (>5.0)
       }
     }
 
@@ -2804,22 +2804,22 @@
       &-item {
         .stage1 {
           &::before {
-            background: #FF6B35;
+            background: #E74C3C !important;
           }
         }
         .stage2 {
           &::before {
-            background: #FFB800 !important;
+            background: #3498DB !important;
           }
         }
         .stage3 {
           &::before {
-            background: #FF8C42 !important;
+            background: #2ECC71 !important;
           }
         }
         .stage4 {
           &::before {
-            background: #F7931E !important;
+            background: #E91E63 !important;
           }
         }
       }
@@ -2845,22 +2845,22 @@
       &-item {
         .stage1 {
           &::before {
-            background: #FF6B35;
+            background: #E74C3C !important;
           }
         }
         .stage2 {
           &::before {
-            background: #FFB800 !important;
+            background: #3498DB !important;
           }
         }
         .stage3 {
           &::before {
-            background: #FF8C42 !important;
+            background: #2ECC71 !important;
           }
         }
         .stage4 {
           &::before {
-            background: #F7931E !important;
+            background: #E91E63 !important;
           }
         }
       }
@@ -2886,22 +2886,22 @@
       &-item {
         .stage1 {
           &::before {
-            background: #FF6B35;
+            background: #E74C3C !important;
           }
         }
         .stage2 {
           &::before {
-            background: #FFB800 !important;
+            background: #3498DB !important;
           }
         }
         .stage3 {
           &::before {
-            background: #FF8C42 !important;
+            background: #2ECC71 !important;
           }
         }
         .stage4 {
           &::before {
-            background: #F7931E !important;
+            background: #E91E63 !important;
           }
         }
       }
@@ -2927,22 +2927,22 @@
       &-item {
         .stage1 {
           &::before {
-            background: #FF6B35;
+            background: #E74C3C !important;
           }
         }
         .stage2 {
           &::before {
-            background: #FFB800 !important;
+            background: #3498DB !important;
           }
         }
         .stage3 {
           &::before {
-            background: #FF8C42 !important;
+            background: #2ECC71 !important;
           }
         }
         .stage4 {
           &::before {
-            background: #F7931E !important;
+            background: #E91E63 !important;
           }
         }
       }
@@ -2968,22 +2968,22 @@
       &-item {
         .stage1 {
           &::before {
-            background: #FF6B35;
+            background: #E74C3C !important;
           }
         }
         .stage2 {
           &::before {
-            background: #FFB800 !important;
+            background: #3498DB !important;
           }
         }
         .stage3 {
           &::before {
-            background: #FF8C42 !important;
+            background: #2ECC71 !important;
           }
         }
         .stage4 {
           &::before {
-            background: #F7931E !important;
+            background: #E91E63 !important;
           }
         }
       }
@@ -3009,22 +3009,22 @@
       &-item {
         .stage1 {
           &::before {
-            background: #FF6B35;
+            background: #E74C3C !important;
           }
         }
         .stage2 {
           &::before {
-            background: #FFB800 !important;
+            background: #3498DB !important;
           }
         }
         .stage3 {
           &::before {
-            background: #FF8C42 !important;
+            background: #2ECC71 !important;
           }
         }
         .stage4 {
           &::before {
-            background: #F7931E !important;
+            background: #E91E63 !important;
           }
         }
       }
@@ -3050,22 +3050,22 @@
       &-item {
         .stage1 {
           &::before {
-            background: #FF6B35;
+            background: #E74C3C !important;
           }
         }
         .stage2 {
           &::before {
-            background: #FFB800 !important;
+            background: #3498DB !important;
           }
         }
         .stage3 {
           &::before {
-            background: #FF8C42 !important;
+            background: #2ECC71 !important;
           }
         }
         .stage4 {
           &::before {
-            background: #F7931E !important;
+            background: #E91E63 !important;
           }
         }
       }
