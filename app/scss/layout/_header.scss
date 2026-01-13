@@ -14,16 +14,18 @@ header {
   background-color: $dark-bg-primary;
 
   &.small {
+    position: fixed;
+    top: 0;
+    left: 0;
     height: 70px;
-    padding: 0px;
-    top: 0px;
+    padding: 0px 26px;
+    z-index: 1000;
     @include glass-card(0.9, 12px);
     border-bottom: 1px solid $border-subtle;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
     width: 100%;
     justify-content: space-between;
     transition: none;
-    padding: 0px 26px;
   }
   @media screen and (max-width: $sm-screen) {
     position: absolute;

@@ -158,7 +158,8 @@
 .analyticBreadCrumbs {
   width: 95%;
   font-family: $font-primary;
-
+  position: relative;
+  z-index: 100;
   margin: 72px auto 0px;
   @media (max-width: 525px) {
     margin: 32px auto 0px;
@@ -180,9 +181,10 @@
     position: fixed;
     background-color: $dark-bg-card;
     @include glass-card;
-    top: 84px;
+    top: 70px;
+    left: 0;
     width: 100%;
-    z-index: 3;
+    z-index: 99999;
     margin: 0px;
     box-shadow: 2px 14px 9px 0 rgba(0, 0, 0, 0.11);
     .analyticBreadCrumbs__container {
@@ -250,6 +252,8 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 10px;
+    position: relative;
+    z-index: 100;
     @media (max-width: 1100px) {
       gap: 8px;
     }
@@ -464,12 +468,13 @@
         position: absolute;
         top: 32px;
         width: 100%;
-        z-index: 10;
+        z-index: 1000;
         background-color: $dark-bg-card;
         @include glass-card;
         border: 1px solid $border-default;
         border-top: none;
         padding: 0px 15px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
 
         li {
           font-size: 14px;
@@ -604,10 +609,6 @@
     &__dropdown {
       position: relative;
       padding-right: 20px;
-      z-index: 99;
-      .DateRangePicker {
-        top: 31px;
-      }
     }
     &__sec {
       width: 50%;
@@ -631,6 +632,8 @@
   font-family: $font-primary;
   margin: 30px auto 0px;
   padding: 0px 55px;
+  z-index: 1;
+  isolation: isolate;
   @media (max-width: 1230px) {
     padding: 0px 10px;
   }
@@ -646,6 +649,7 @@
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     position: relative;
     transition: all 0.3s ease;
+    z-index: 1;
 
     // Clean top accent bar
     &::before {
@@ -1350,28 +1354,28 @@
       box-shadow: 0 0 8px currentColor;
       &.dot {
         &__1 {
-          background: #FF6B35; // Primary orange (0.7-1.0)
+          background: #E74C3C; // Red (0.7-1.0)
         }
         &__2 {
-          background: #FFB800; // Golden yellow (1.0-3.0)
+          background: #3498DB; // Blue (1.0-3.0)
         }
         &__3 {
-          background: #FF8C42; // Light orange (3.0-5.0)
+          background: #2ECC71; // Green (3.0-5.0)
         }
         &__4 {
-          background: #F7931E; // Amber (>5.0)
+          background: #E91E63; // Pink (>5.0)
         }
         &__5 {
-          background: #FFA94D;
+          background: #9B59B6; // Purple
         }
         &__6 {
-          background: #E85D04;
+          background: #F39C12; // Orange
         }
         &__7 {
-          background: #FFBA49;
+          background: #1ABC9C; // Teal
         }
         &__8 {
-          background: #DC6B19;
+          background: #34495E; // Dark Grey
         }
       }
     }
@@ -1567,16 +1571,16 @@
           }
 
           &.stage1::before {
-            background: #FF6B35; // Primary orange (0.7-1.0)
+            background: #E74C3C; // Red (0.7-1.0)
           }
           &.stage2::before {
-            background: #FFB800; // Golden yellow (1.0-3.0)
+            background: #3498DB; // Blue (1.0-3.0)
           }
           &.stage3::before {
-            background: #FF8C42; // Light orange (3.0-5.0)
+            background: #2ECC71; // Green (3.0-5.0)
           }
           &.stage4::before {
-            background: #F7931E; // Amber (>5.0)
+            background: #E91E63; // Pink (>5.0)
           }
         }
 

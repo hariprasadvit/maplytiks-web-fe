@@ -210,7 +210,8 @@ const DashBoardHeader = ({
               </div>
               { (mediumSelected == 'BC'  ||  mediumSelected == 'OTT' ||  mediumSelected == 'DG') && (
                 <div className="platformMenu">
-                  <h5>View</h5>
+
+                  <h5>Vertical</h5>
                   <div
                     className="platformMenu-item "
                     onClick={() => setViewDropDownOpen(!isViewDropdownOpen)}

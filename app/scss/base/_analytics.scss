@@ -1368,11 +1368,14 @@
 }
 
 .card {
-  position: absolute;
+  position: fixed;
   border-radius: 5px;
-  background-color: $text-primary;
-  box-shadow: 0 20px 20px -15px $shadow-default;
+  background-color: $dark-bg-card;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
   display: inline-flex;
+  z-index: 99999;
+  border: 1px solid $border-default;
+  pointer-events: none;
 
   .analysisBar {
     padding: 20px 45px 11px 24px;
@@ -1390,7 +1393,7 @@
   }
 
   h4 {
-    color: $text-secondary;
+    color: $text-primary;
     font-family: $font-primary;
     font-size: 14px;
     font-weight: 700;
@@ -1400,7 +1403,7 @@
   }
 
   h5 {
-    color: $text-secondary;
+    color: $text-primary;
     font-family: $font-primary;
     font-size: 12px;
     font-weight: 500;

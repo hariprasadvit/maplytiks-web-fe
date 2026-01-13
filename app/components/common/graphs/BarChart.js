@@ -55,6 +55,7 @@ const BarChart = ({
   const linePathRef = useRef();
   const statsLegendRef = useRef();
   const svgRef = useRef();
+  const localTooltipRef = useRef();
   const tooltipRef = tootltipRef;
 
   // <==========================(width x height) Setup according to margiin convention==============================>
@@ -339,40 +340,43 @@ const BarChart = ({
         return 0;
       });
 
-    d3.selectAll('.bar').transition(300);
+    barGroupContainer.selectAll('.bar').transition(300);
 
     // .attr('fill-opacity', d => (isShowOnlyLive && !d.isLive ? 0.2 : 1));
 
-    d3.selectAll('.bar')
-      .on('mouseover', d => {
-        tooltip.style('display', 'block');
-        tooltip.style('visibility', 'visible');
-        tooltip.html(`<div class='analysisBar'>
-          ${d.tooltip &&
-            Object.keys(d.tooltip).map(tooltipData =>
-              tooltipData === 'date'
-                ? `<h5>${moment(d.tooltip[tooltipData]).format(
-                    'DD MMM YYYY',
-                  )}</h5>`
-                : `<h5>${d.tooltip[tooltipData]}</h5>`,
-            )}
-            <h5>${d.key.charAt(0).toUpperCase() + d.key.slice(1)}: ${
-          d.key === 'value'
-            ? _numberToHumanReadableFormatConverter(d.value,true,false,projectDetail)
-            : d.key === 'quantity'
-            ? `${secToString(d.value)} (HH:MM:SS)`
-            : d.value
-        } ${d.key === 'quality' ? '%' : ''}</h5>
-        </div>`);
+    // Tooltip event handlers - use local tooltip
+    var localTooltip = d3.select(localTooltipRef.current);
+
+    barGroupContainer.selectAll('g.bar-group').selectAll('rect')
+      .on('mouseover', function(d) {
+        localTooltip.style('display', 'block');
+        localTooltip.style('visibility', 'visible');
+        var tooltipContent = d.tooltip
+          ? Object.keys(d.tooltip).map(function(tooltipData) {
+              return tooltipData === 'date'
+                ? '<h5>' + moment(d.tooltip[tooltipData]).format('DD MMM YYYY') + '</h5>'
+                : '<h5>' + d.tooltip[tooltipData] + '</h5>';
+            }).join('')
+          : '';
+        var valueDisplay = d.key === 'value'
+          ? _numberToHumanReadableFormatConverter(d.value, true, false, projectDetail)
+          : d.key === 'quantity'
+          ? secToString(d.value) + ' (HH:MM:SS)'
+          : d.value;
+        var suffix = d.key === 'quality' ? '%' : '';
+        localTooltip.html('<div class="analysisBar">' +
+          tooltipContent +
+          '<h5>' + d.key.charAt(0).toUpperCase() + d.key.slice(1) + ': ' + valueDisplay + ' ' + suffix + '</h5>' +
+          '</div>');
       })
-      .on('mousemove', () => {
-        tooltip
-          .style('top', `${d3.event.pageY - 100}px`)
-          .style('left', `${d3.event.pageX + 30}px`);
+      .on('mousemove', function() {
+        localTooltip
+          .style('top', (d3.event.pageY - 100) + 'px')
+          .style('left', (d3.event.pageX + 30) + 'px');
       })
-      .on('mouseout', () => {
-        tooltip.style('visibility', 'hidden');
-        tooltip.style('display', 'none');
+      .on('mouseout', function() {
+        localTooltip.style('visibility', 'hidden');
+        localTooltip.style('display', 'none');
       });
 
     // Line Graph Generation
@@ -534,6 +538,21 @@ const BarChart = ({
           <GraphLoader width={width} height={height} />
         )}
       </svg>
+      <div
+        ref={localTooltipRef}
+        className="bar-chart-tooltip"
+        style={{
+          display: 'none',
+          position: 'fixed',
+          background: 'rgba(20, 20, 30, 0.95)',
+          border: '1px solid rgba(255, 107, 53, 0.3)',
+          borderRadius: '8px',
+          padding: '12px 16px',
+          zIndex: 999999,
+          pointerEvents: 'none',
+          boxShadow: '0 8px 32px rgba(0, 0, 0, 0.4)'
+        }}
+      />
     </>
   );
 };

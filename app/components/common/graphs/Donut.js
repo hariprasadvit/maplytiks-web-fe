@@ -8,28 +8,19 @@ import {
 import PropTypes from 'prop-types';
 import * as d3 from 'd3';
 
-// Warm color scheme - Orange/Yellow shades only (brand colors)
+// Color schemes - all schemes use distinct colors (Red, Blue, Green, Pink)
 const COLOR_SCHEMES = {
-  default: ['#FF6B35', '#F7931E', '#FFB800', '#FF8C42', '#FFA94D', '#E85D04', '#FFBA49', '#DC6B19'],
-  home: ['#FF6B35', '#F7931E', '#FFB800', '#FF8C42', '#FFA94D', '#E85D04', '#FFBA49', '#DC6B19'],
-  ce: [
-    '#FF6B35',  // Primary orange (0.7-1.0)
-    '#FFB800',  // Golden yellow (1.0-3.0)
-    '#FF8C42',  // Light orange (3.0-5.0)
-    '#F7931E',  // Amber (>5.0)
-    '#FFA94D',
-    '#E85D04',
-    '#FFBA49',
-    '#DC6B19',
-  ],
-  red: ['#FF6B35', '#F97316', '#E85D04', '#DC6B19'],
-  blue: ['#FF6B35', '#F7931E', '#FFB800', '#FF8C42'],
-  green: ['#FF6B35', '#F7931E', '#FFB800', '#FF8C42'],
-  grey: ['#FF6B35', '#F7931E', '#FFB800', '#FF8C42'],
-  pink: ['#FF6B35', '#F7931E', '#FFB800', '#FF8C42'],
-  teal: ['#FF6B35', '#F7931E', '#FFB800', '#FF8C42'],
-  yellow: ['#FFB800', '#F7931E', '#FFA94D', '#FFBA49'],
-  purple: ['#FF6B35', '#F7931E', '#FFB800', '#FF8C42'],
+  default: ['#E74C3C', '#3498DB', '#2ECC71', '#E91E63', '#9B59B6', '#F39C12', '#1ABC9C', '#34495E'],
+  home: ['#E74C3C', '#3498DB', '#2ECC71', '#E91E63', '#9B59B6', '#F39C12', '#1ABC9C', '#34495E'],
+  ce: ['#E74C3C', '#3498DB', '#2ECC71', '#E91E63', '#9B59B6', '#F39C12', '#1ABC9C', '#34495E'],
+  red: ['#E74C3C', '#3498DB', '#2ECC71', '#E91E63', '#9B59B6', '#F39C12', '#1ABC9C', '#34495E'],
+  blue: ['#E74C3C', '#3498DB', '#2ECC71', '#E91E63', '#9B59B6', '#F39C12', '#1ABC9C', '#34495E'],
+  green: ['#E74C3C', '#3498DB', '#2ECC71', '#E91E63', '#9B59B6', '#F39C12', '#1ABC9C', '#34495E'],
+  grey: ['#E74C3C', '#3498DB', '#2ECC71', '#E91E63', '#9B59B6', '#F39C12', '#1ABC9C', '#34495E'],
+  pink: ['#E74C3C', '#3498DB', '#2ECC71', '#E91E63', '#9B59B6', '#F39C12', '#1ABC9C', '#34495E'],
+  teal: ['#E74C3C', '#3498DB', '#2ECC71', '#E91E63', '#9B59B6', '#F39C12', '#1ABC9C', '#34495E'],
+  yellow: ['#E74C3C', '#3498DB', '#2ECC71', '#E91E63', '#9B59B6', '#F39C12', '#1ABC9C', '#34495E'],
+  purple: ['#E74C3C', '#3498DB', '#2ECC71', '#E91E63', '#9B59B6', '#F39C12', '#1ABC9C', '#34495E'],
 };
 
 const FONT_CLASS_CONFIG = {

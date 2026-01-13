@@ -31,6 +31,17 @@
   }
 }
 
+// Bar class for D3 bars (used in BarChart.js)
+.bar {
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    filter: brightness(1.3);
+    opacity: 0.9;
+  }
+}
+
 // Animated bar entrance
 @keyframes barGrow {
   from {
@@ -212,6 +223,23 @@
     color: $text-secondary;
     font-size: 11px;
     margin-top: 4px;
+  }
+}
+
+// Bar chart tooltip
+.bar-chart-tooltip {
+  .analysisBar {
+    h5 {
+      color: $text-primary;
+      font-size: 13px;
+      font-weight: 500;
+      margin: 0 0 8px 0;
+      white-space: nowrap;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
 }
 
